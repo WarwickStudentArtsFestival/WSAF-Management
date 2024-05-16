@@ -1,0 +1,8 @@
+FROM node:22.1
+
+WORKDIR /srv/app
+
+COPY package.json package-lock.json ./
+
+# Install Node packages
+RUN npm install -g npm@latest && npm ci
