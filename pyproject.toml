@@ -1,0 +1,118 @@
+[project]
+requires-python = ">=3.12"
+
+#[tool.black]
+#line-length = 120
+#target-version = ['py311']
+#skip-string-normalization = false
+#exclude = '''
+#(
+#  /(
+#    | \.git
+#    | node_modules
+#  )/
+#)
+#'''
+
+#[tool.isort]
+#line_length = 120
+#multi_line_output = 5
+#balanced_wrapping = true
+#known_django = 'django'
+#sections = 'FUTURE,STDLIB,DJANGO,THIRDPARTY,FIRSTPARTY,LOCALFOLDER'
+#skip = 'node_modules'
+
+
+[tool.mypy]
+# The mypy configurations: https://mypy.readthedocs.io/en/latest/config_file.html
+python_version = "3.11"
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+ignore_errors = false
+ignore_missing_imports = true
+implicit_reexport = false
+strict_optional = true
+strict_equality = true
+no_implicit_optional = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unused_configs = true
+warn_unreachable = true
+warn_no_return = true
+
+plugins = [
+  "mypy_django_plugin.main",
+]
+
+
+[tool.django-stubs]
+django_settings_module = "config.settings.test_runner"
+
+
+[tool.pytest.ini_options]
+addopts = "--nomigrations --ds config.settings.test_runner --cov-config=config/coverage.ini"
+
+# Python warnings documentation: https://docs.python.org/3/library/warnings.html
+filterwarnings = [
+    # Set the default behavior for warnings to error, so it forces you to look into fixing them
+    "error",
+]
+
+[tool.bandit]
+exclude_dirs = ["tests", "node_modules"]
+
+[tool.coverage.run]
+branch = true
+source = ["."]
+omit = [
+    ".venv/*",
+    "manage.py",
+    "*migrations*",
+]
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.djlint]
+indent = 2
+profile="django"
+max_line_length=120
+blank_line_after_tag="endblock,extends,load"
+format_css=true
+format_js=true
+use_gitignore=true
+ignore="H030,H031,H017"
+exclude="base-email.html"
+
+[tool.djlint.js]
+indent_size=2
+
+[tool.djlint.css]
+indent_size=2
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle
+    "F",  # Pyflakes
+    "UP",  # pyupgrade
+    "B",  # flake8-bugbear
+    "SIM",  # flake8-simplify
+    "I",  # isort
+    "D",  # pydocstyle
+    "S",  # bandit
+]
+ignore = ["D100", "D101", "D102", "D103", "D104", "D106", "D203", "D212"]
+
+[tool.ruff.lint.per-file-ignores]
+"**/{tests}/*" = ["S101"]
+
+[tool.ruff.lint.isort.sections]
+"django" = ["django"]
+
+[tool.ruff.lint.isort]
+section-order = ["future", "standard-library", "django", "third-party", "first-party", "local-folder", ]

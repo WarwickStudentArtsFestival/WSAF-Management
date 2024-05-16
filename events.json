@@ -1,0 +1,3256 @@
+[
+    {
+        "model": "admin.logentry",
+        "pk": 1,
+        "fields": {
+            "action_time": "2024-05-15T19:30:08.661Z",
+            "user": 1,
+            "content_type": 13,
+            "object_id": "1",
+            "object_repr": "Windmill Hill Stage",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 2,
+        "fields": {
+            "action_time": "2024-05-15T19:30:31.103Z",
+            "user": 1,
+            "content_type": 13,
+            "object_id": "2",
+            "object_repr": "FAB0.20",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 3,
+        "fields": {
+            "action_time": "2024-05-15T19:30:44.923Z",
+            "user": 1,
+            "content_type": 13,
+            "object_id": "3",
+            "object_repr": "FAB0.19",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 4,
+        "fields": {
+            "action_time": "2024-05-15T19:30:51.170Z",
+            "user": 1,
+            "content_type": 13,
+            "object_id": "4",
+            "object_repr": "FAB Terrace",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 5,
+        "fields": {
+            "action_time": "2024-05-15T19:31:00.437Z",
+            "user": 1,
+            "content_type": 13,
+            "object_id": "5",
+            "object_repr": "Curiositea",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 6,
+        "fields": {
+            "action_time": "2024-05-15T19:31:18.494Z",
+            "user": 1,
+            "content_type": 13,
+            "object_id": "6",
+            "object_repr": "Windmill Hill",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 7,
+        "fields": {
+            "action_time": "2024-05-15T19:34:23.646Z",
+            "user": 1,
+            "content_type": 14,
+            "object_id": "1",
+            "object_repr": "Theatre",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 8,
+        "fields": {
+            "action_time": "2024-05-15T19:34:28.423Z",
+            "user": 1,
+            "content_type": 14,
+            "object_id": "2",
+            "object_repr": "Dance",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 9,
+        "fields": {
+            "action_time": "2024-05-15T19:34:30.976Z",
+            "user": 1,
+            "content_type": 14,
+            "object_id": "3",
+            "object_repr": "Music",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 10,
+        "fields": {
+            "action_time": "2024-05-15T19:34:34.680Z",
+            "user": 1,
+            "content_type": 14,
+            "object_id": "4",
+            "object_repr": "Spoken Word",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 11,
+        "fields": {
+            "action_time": "2024-05-15T19:34:38.350Z",
+            "user": 1,
+            "content_type": 14,
+            "object_id": "5",
+            "object_repr": "Film",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 12,
+        "fields": {
+            "action_time": "2024-05-15T19:34:43.463Z",
+            "user": 1,
+            "content_type": 14,
+            "object_id": "6",
+            "object_repr": "Workshop",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 13,
+        "fields": {
+            "action_time": "2024-05-15T19:37:14.404Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "1",
+            "object_repr": "Izzy B",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 14,
+        "fields": {
+            "action_time": "2024-05-15T19:38:27.132Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "1",
+            "object_repr": "Izzy B",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Estimated duration\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 15,
+        "fields": {
+            "action_time": "2024-05-15T19:38:59.445Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "1",
+            "object_repr": "Penaultimate Customers",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 16,
+        "fields": {
+            "action_time": "2024-05-15T19:39:09.219Z",
+            "user": 1,
+            "content_type": 14,
+            "object_id": "7",
+            "object_repr": "Comedy",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 17,
+        "fields": {
+            "action_time": "2024-05-15T19:39:44.899Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "2",
+            "object_repr": "Last Orders",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 18,
+        "fields": {
+            "action_time": "2024-05-15T19:39:58.517Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "2",
+            "object_repr": "Warwick KnitSoc",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 19,
+        "fields": {
+            "action_time": "2024-05-15T19:40:26.500Z",
+            "user": 1,
+            "content_type": 14,
+            "object_id": "8",
+            "object_repr": "Exhibition",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 20,
+        "fields": {
+            "action_time": "2024-05-15T19:40:30.635Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "3",
+            "object_repr": "KnitSoc creative showcase",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 21,
+        "fields": {
+            "action_time": "2024-05-15T19:41:10.167Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "4",
+            "object_repr": "Chicken Soup with Barley",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 22,
+        "fields": {
+            "action_time": "2024-05-15T19:44:17.351Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "3",
+            "object_repr": "BandSoc",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 23,
+        "fields": {
+            "action_time": "2024-05-15T19:45:46.909Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "5",
+            "object_repr": "BandSoc Showcase",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 24,
+        "fields": {
+            "action_time": "2024-05-15T19:46:00.745Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "5",
+            "object_repr": "BandSoc Showcase",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Submission id\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 25,
+        "fields": {
+            "action_time": "2024-05-15T19:46:56.411Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "6",
+            "object_repr": "Sleepy senzzz",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 26,
+        "fields": {
+            "action_time": "2024-05-15T19:47:15.416Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "5",
+            "object_repr": "BandSoc Showcase",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Estimated duration\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 27,
+        "fields": {
+            "action_time": "2024-05-15T19:47:46.438Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "4",
+            "object_repr": "Mars' Bars",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 28,
+        "fields": {
+            "action_time": "2024-05-15T19:48:13.337Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "7",
+            "object_repr": "Average Off-day For A Beatboxer",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 29,
+        "fields": {
+            "action_time": "2024-05-15T19:48:21.775Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "5",
+            "object_repr": "Cobalt Magazine Society",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 30,
+        "fields": {
+            "action_time": "2024-05-15T19:48:51.024Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "8",
+            "object_repr": "Unveiled Treasures Creativity Workshop",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 31,
+        "fields": {
+            "action_time": "2024-05-15T19:49:27.074Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "9",
+            "object_repr": "Mirage",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 32,
+        "fields": {
+            "action_time": "2024-05-15T19:50:04.350Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "10",
+            "object_repr": "Siddhi",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 33,
+        "fields": {
+            "action_time": "2024-05-15T19:52:42.656Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "11",
+            "object_repr": "13 - self.title - None",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 34,
+        "fields": {
+            "action_time": "2024-05-15T19:53:57.017Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "12",
+            "object_repr": "14 - Art by Matthew Dickinson",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 35,
+        "fields": {
+            "action_time": "2024-05-15T19:54:43.350Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "13",
+            "object_repr": "16 - Crocheting workshop (Warwick KnitSoc)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 36,
+        "fields": {
+            "action_time": "2024-05-15T19:54:53.273Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "6",
+            "object_repr": "University of Warwick Wind Orchestra",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 37,
+        "fields": {
+            "action_time": "2024-05-15T19:55:34.955Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "14",
+            "object_repr": "17 - Wind Orchestra Charity Playathon (University of Warwick Wind Orchestra)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 38,
+        "fields": {
+            "action_time": "2024-05-15T19:56:19.716Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "15",
+            "object_repr": "18 - The Strongest Block Floor",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 39,
+        "fields": {
+            "action_time": "2024-05-15T19:57:14.940Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "16",
+            "object_repr": "19 - Art By Balqis: The Beauty of Malaysian Culture",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 40,
+        "fields": {
+            "action_time": "2024-05-15T19:57:49.064Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "17",
+            "object_repr": "20 - Prav’s Originals",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 41,
+        "fields": {
+            "action_time": "2024-05-15T19:59:25.654Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "18",
+            "object_repr": "21 - Poetry by Apurva Wahul",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 42,
+        "fields": {
+            "action_time": "2024-05-15T20:00:14.258Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "19",
+            "object_repr": "22 - Falasteen (tapestry)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 43,
+        "fields": {
+            "action_time": "2024-05-15T20:01:14.275Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "20",
+            "object_repr": "23 - Nikkon Banerjee: Classical Dance",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 44,
+        "fields": {
+            "action_time": "2024-05-15T20:01:33.646Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "21",
+            "object_repr": "23 - Nikkon Banerjee: Singing",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 45,
+        "fields": {
+            "action_time": "2024-05-15T20:02:38.386Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "22",
+            "object_repr": "25 - Yiming Liu: Traditional Chinese folk song",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 46,
+        "fields": {
+            "action_time": "2024-05-15T20:03:12.573Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "23",
+            "object_repr": "26 - DJ: Eyes on the Fire",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 47,
+        "fields": {
+            "action_time": "2024-05-15T20:03:26.376Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "7",
+            "object_repr": "Warwick Folk Society",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 48,
+        "fields": {
+            "action_time": "2024-05-15T20:03:57.638Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "24",
+            "object_repr": "27 - Summer Ceilidh (Warwick Folk Society)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 49,
+        "fields": {
+            "action_time": "2024-05-15T20:04:24.300Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "25",
+            "object_repr": "28 - South Indian Street Dance",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 50,
+        "fields": {
+            "action_time": "2024-05-15T20:04:41.819Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "8",
+            "object_repr": "elixir",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 51,
+        "fields": {
+            "action_time": "2024-05-15T20:04:48.344Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "8",
+            "object_repr": "elixir",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Description\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 52,
+        "fields": {
+            "action_time": "2024-05-15T20:05:28.357Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "26",
+            "object_repr": "29 - Acoustic New Music Performance with ‘elixir’ (elixir)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 53,
+        "fields": {
+            "action_time": "2024-05-15T20:07:00.651Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "27",
+            "object_repr": "30 - Yang Zhao",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 54,
+        "fields": {
+            "action_time": "2024-05-15T20:07:35.175Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "28",
+            "object_repr": "31 - Beck Sewart",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 55,
+        "fields": {
+            "action_time": "2024-05-15T20:08:46.974Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "29",
+            "object_repr": "32 - Chufan Wang",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 56,
+        "fields": {
+            "action_time": "2024-05-15T20:08:58.339Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "9",
+            "object_repr": "Warwick Pantomime Society",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 57,
+        "fields": {
+            "action_time": "2024-05-15T20:09:34.660Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "30",
+            "object_repr": "33 - Jack in the Beanstalk (Warwick Pantomime Society)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 58,
+        "fields": {
+            "action_time": "2024-05-15T20:10:32.790Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "10",
+            "object_repr": "Freshblood",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 59,
+        "fields": {
+            "action_time": "2024-05-15T20:10:51.139Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "31",
+            "object_repr": "34 - Blue Moon (Freshblood)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 60,
+        "fields": {
+            "action_time": "2024-05-15T20:11:58.360Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "32",
+            "object_repr": "35 - Sreekeerthana Kamalesh",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 61,
+        "fields": {
+            "action_time": "2024-05-15T20:12:19.294Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "33",
+            "object_repr": "36 - The Art of Ellie Stocker",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 62,
+        "fields": {
+            "action_time": "2024-05-15T20:12:27.608Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "11",
+            "object_repr": "Brass Society",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 63,
+        "fields": {
+            "action_time": "2024-05-15T20:13:05.084Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "34",
+            "object_repr": "37 - Symphonic Brass (Brass Society)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 64,
+        "fields": {
+            "action_time": "2024-05-15T20:14:49.541Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "32",
+            "object_repr": "38 - Sreekeerthana Kamalesh",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Submission id\", \"Description\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 65,
+        "fields": {
+            "action_time": "2024-05-15T20:17:21.980Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "35",
+            "object_repr": "39 - Elias Desalegn Girma: It doesn’t hurt to try",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 66,
+        "fields": {
+            "action_time": "2024-05-15T20:28:21.484Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "35",
+            "object_repr": "39 - Elias Desalegn Girma: It doesn’t hurt to try",
+            "action_flag": 2,
+            "change_message": "[]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 67,
+        "fields": {
+            "action_time": "2024-05-15T20:29:08.577Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "36",
+            "object_repr": "40 - Flute Choir (University of Warwick Wind Orchestra)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 68,
+        "fields": {
+            "action_time": "2024-05-15T20:29:24.645Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "12",
+            "object_repr": "Warwick Filmmaking Society",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 69,
+        "fields": {
+            "action_time": "2024-05-15T20:31:12.940Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "37",
+            "object_repr": "41 - Filmmaking Workshop (Warwick Filmmaking Society)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 70,
+        "fields": {
+            "action_time": "2024-05-15T20:31:40.413Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "38",
+            "object_repr": "41 - screen writing workshop (Warwick Filmmaking Society)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 71,
+        "fields": {
+            "action_time": "2024-05-15T20:32:04.592Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "39",
+            "object_repr": "41 - 24 hour film competition showcase (Warwick Filmmaking Society)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 72,
+        "fields": {
+            "action_time": "2024-05-15T20:32:37.301Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "40",
+            "object_repr": "42 - Sean Cabatana: An evening of modern guitar",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 73,
+        "fields": {
+            "action_time": "2024-05-15T20:32:47.174Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "13",
+            "object_repr": "Warwick Documentary Society",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 74,
+        "fields": {
+            "action_time": "2024-05-15T20:33:30.017Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "41",
+            "object_repr": "43 - Art and Reality: Warwick Student Documentary Production (Warwick Documentary Society)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 75,
+        "fields": {
+            "action_time": "2024-05-15T20:34:42.144Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "42",
+            "object_repr": "44 - Madhumitha: Bharatnatyam showcase",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 76,
+        "fields": {
+            "action_time": "2024-05-15T20:34:48.759Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "14",
+            "object_repr": "Warwick Pole and Aerial Arts",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 77,
+        "fields": {
+            "action_time": "2024-05-15T20:35:34.438Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "43",
+            "object_repr": "45 - Pole/Aerial Arts (Warwick Pole and Aerial Arts)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 78,
+        "fields": {
+            "action_time": "2024-05-15T20:35:41.202Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "43",
+            "object_repr": "45 - Pole/Aerial Arts (Warwick Pole and Aerial Arts)",
+            "action_flag": 2,
+            "change_message": "[{\"changed\": {\"fields\": [\"Categories\"]}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 79,
+        "fields": {
+            "action_time": "2024-05-15T20:36:48.233Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "44",
+            "object_repr": "46 - Chinese Dance Team",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 80,
+        "fields": {
+            "action_time": "2024-05-15T20:37:48.471Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "45",
+            "object_repr": "47 - Anokh Tiwana-Parmar: Paul Forthright",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 81,
+        "fields": {
+            "action_time": "2024-05-15T20:37:56.117Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "15",
+            "object_repr": "Pigeon Theatre",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 82,
+        "fields": {
+            "action_time": "2024-05-15T20:45:24.040Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "46",
+            "object_repr": "48 - Bird Watching (Pigeon Theatre)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 83,
+        "fields": {
+            "action_time": "2024-05-15T20:46:01.051Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "47",
+            "object_repr": "49 - The Brwn Space",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 84,
+        "fields": {
+            "action_time": "2024-05-15T20:46:17.231Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "16",
+            "object_repr": "Warwick Content Creation Society",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 85,
+        "fields": {
+            "action_time": "2024-05-15T20:47:43.679Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "48",
+            "object_repr": "50 - Creator Showcase (Warwick Content Creation Society)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 86,
+        "fields": {
+            "action_time": "2024-05-15T20:48:54.901Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "49",
+            "object_repr": "51 - Chaotic Space",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 87,
+        "fields": {
+            "action_time": "2024-05-15T20:49:20.909Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "50",
+            "object_repr": "52 - Alex Lukic",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 88,
+        "fields": {
+            "action_time": "2024-05-15T20:49:56.228Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "51",
+            "object_repr": "53 - Adèle",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 89,
+        "fields": {
+            "action_time": "2024-05-15T20:50:40.318Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "52",
+            "object_repr": "54 - Kawai: Mashup of Indian and English songs",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 90,
+        "fields": {
+            "action_time": "2024-05-15T20:51:38.748Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "53",
+            "object_repr": "55 - Behind the Curtain / Wired Tensions",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 91,
+        "fields": {
+            "action_time": "2024-05-15T20:52:23.053Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "54",
+            "object_repr": "56 - Kieran Persaud: Piano Favs Compilation",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 92,
+        "fields": {
+            "action_time": "2024-05-15T20:52:36.007Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "17",
+            "object_repr": "Opera Warwick",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 93,
+        "fields": {
+            "action_time": "2024-05-15T20:53:08.549Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "55",
+            "object_repr": "57 - Opera Scenes by Opera Warwick (Opera Warwick)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 94,
+        "fields": {
+            "action_time": "2024-05-15T20:53:33.940Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "56",
+            "object_repr": "58 - Gabriel Carvalho: Brazilian piano",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 95,
+        "fields": {
+            "action_time": "2024-05-15T20:53:37.945Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "18",
+            "object_repr": "Writing Society",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 96,
+        "fields": {
+            "action_time": "2024-05-15T20:55:34.163Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "57",
+            "object_repr": "59 - Writing Workshop (Writing Society)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 97,
+        "fields": {
+            "action_time": "2024-05-15T20:55:41.844Z",
+            "user": 1,
+            "content_type": 11,
+            "object_id": "19",
+            "object_repr": "BoundBy",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 98,
+        "fields": {
+            "action_time": "2024-05-15T20:56:21.881Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "58",
+            "object_repr": "60 - Poetry Workshop (BoundBy)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 99,
+        "fields": {
+            "action_time": "2024-05-15T20:57:23.206Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "59",
+            "object_repr": "61 - Poetry Reading (BoundBy)",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "admin.logentry",
+        "pk": 100,
+        "fields": {
+            "action_time": "2024-05-15T20:57:59.404Z",
+            "user": 1,
+            "content_type": 12,
+            "object_id": "60",
+            "object_repr": "62 - T-Shirt tie dye",
+            "action_flag": 1,
+            "change_message": "[{\"added\": {}}]"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 1,
+        "fields": {
+            "name": "Can add log entry",
+            "content_type": 1,
+            "codename": "add_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 2,
+        "fields": {
+            "name": "Can change log entry",
+            "content_type": 1,
+            "codename": "change_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 3,
+        "fields": {
+            "name": "Can delete log entry",
+            "content_type": 1,
+            "codename": "delete_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 4,
+        "fields": {
+            "name": "Can view log entry",
+            "content_type": 1,
+            "codename": "view_logentry"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 5,
+        "fields": {
+            "name": "Can add permission",
+            "content_type": 2,
+            "codename": "add_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 6,
+        "fields": {
+            "name": "Can change permission",
+            "content_type": 2,
+            "codename": "change_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 7,
+        "fields": {
+            "name": "Can delete permission",
+            "content_type": 2,
+            "codename": "delete_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 8,
+        "fields": {
+            "name": "Can view permission",
+            "content_type": 2,
+            "codename": "view_permission"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 9,
+        "fields": {
+            "name": "Can add group",
+            "content_type": 3,
+            "codename": "add_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 10,
+        "fields": {
+            "name": "Can change group",
+            "content_type": 3,
+            "codename": "change_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 11,
+        "fields": {
+            "name": "Can delete group",
+            "content_type": 3,
+            "codename": "delete_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 12,
+        "fields": {
+            "name": "Can view group",
+            "content_type": 3,
+            "codename": "view_group"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 13,
+        "fields": {
+            "name": "Can add content type",
+            "content_type": 4,
+            "codename": "add_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 14,
+        "fields": {
+            "name": "Can change content type",
+            "content_type": 4,
+            "codename": "change_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 15,
+        "fields": {
+            "name": "Can delete content type",
+            "content_type": 4,
+            "codename": "delete_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 16,
+        "fields": {
+            "name": "Can view content type",
+            "content_type": 4,
+            "codename": "view_contenttype"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 17,
+        "fields": {
+            "name": "Can add session",
+            "content_type": 5,
+            "codename": "add_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 18,
+        "fields": {
+            "name": "Can change session",
+            "content_type": 5,
+            "codename": "change_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 19,
+        "fields": {
+            "name": "Can delete session",
+            "content_type": 5,
+            "codename": "delete_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 20,
+        "fields": {
+            "name": "Can view session",
+            "content_type": 5,
+            "codename": "view_session"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 21,
+        "fields": {
+            "name": "Can add site",
+            "content_type": 6,
+            "codename": "add_site"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 22,
+        "fields": {
+            "name": "Can change site",
+            "content_type": 6,
+            "codename": "change_site"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 23,
+        "fields": {
+            "name": "Can delete site",
+            "content_type": 6,
+            "codename": "delete_site"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 24,
+        "fields": {
+            "name": "Can view site",
+            "content_type": 6,
+            "codename": "view_site"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 25,
+        "fields": {
+            "name": "Can add user",
+            "content_type": 7,
+            "codename": "add_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 26,
+        "fields": {
+            "name": "Can change user",
+            "content_type": 7,
+            "codename": "change_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 27,
+        "fields": {
+            "name": "Can delete user",
+            "content_type": 7,
+            "codename": "delete_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 28,
+        "fields": {
+            "name": "Can view user",
+            "content_type": 7,
+            "codename": "view_user"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 29,
+        "fields": {
+            "name": "Can add email address",
+            "content_type": 8,
+            "codename": "add_emailaddress"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 30,
+        "fields": {
+            "name": "Can change email address",
+            "content_type": 8,
+            "codename": "change_emailaddress"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 31,
+        "fields": {
+            "name": "Can delete email address",
+            "content_type": 8,
+            "codename": "delete_emailaddress"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 32,
+        "fields": {
+            "name": "Can view email address",
+            "content_type": 8,
+            "codename": "view_emailaddress"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 33,
+        "fields": {
+            "name": "Can add email confirmation",
+            "content_type": 9,
+            "codename": "add_emailconfirmation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 34,
+        "fields": {
+            "name": "Can change email confirmation",
+            "content_type": 9,
+            "codename": "change_emailconfirmation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 35,
+        "fields": {
+            "name": "Can delete email confirmation",
+            "content_type": 9,
+            "codename": "delete_emailconfirmation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 36,
+        "fields": {
+            "name": "Can view email confirmation",
+            "content_type": 9,
+            "codename": "view_emailconfirmation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 37,
+        "fields": {
+            "name": "Can add event instance",
+            "content_type": 10,
+            "codename": "add_eventinstance"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 38,
+        "fields": {
+            "name": "Can change event instance",
+            "content_type": 10,
+            "codename": "change_eventinstance"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 39,
+        "fields": {
+            "name": "Can delete event instance",
+            "content_type": 10,
+            "codename": "delete_eventinstance"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 40,
+        "fields": {
+            "name": "Can view event instance",
+            "content_type": 10,
+            "codename": "view_eventinstance"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 41,
+        "fields": {
+            "name": "Can add organisation",
+            "content_type": 11,
+            "codename": "add_organisation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 42,
+        "fields": {
+            "name": "Can change organisation",
+            "content_type": 11,
+            "codename": "change_organisation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 43,
+        "fields": {
+            "name": "Can delete organisation",
+            "content_type": 11,
+            "codename": "delete_organisation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 44,
+        "fields": {
+            "name": "Can view organisation",
+            "content_type": 11,
+            "codename": "view_organisation"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 45,
+        "fields": {
+            "name": "Can add event",
+            "content_type": 12,
+            "codename": "add_event"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 46,
+        "fields": {
+            "name": "Can change event",
+            "content_type": 12,
+            "codename": "change_event"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 47,
+        "fields": {
+            "name": "Can delete event",
+            "content_type": 12,
+            "codename": "delete_event"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 48,
+        "fields": {
+            "name": "Can view event",
+            "content_type": 12,
+            "codename": "view_event"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 49,
+        "fields": {
+            "name": "Can add location",
+            "content_type": 13,
+            "codename": "add_location"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 50,
+        "fields": {
+            "name": "Can change location",
+            "content_type": 13,
+            "codename": "change_location"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 51,
+        "fields": {
+            "name": "Can delete location",
+            "content_type": 13,
+            "codename": "delete_location"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 52,
+        "fields": {
+            "name": "Can view location",
+            "content_type": 13,
+            "codename": "view_location"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 53,
+        "fields": {
+            "name": "Can add venue",
+            "content_type": 13,
+            "codename": "add_venue"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 54,
+        "fields": {
+            "name": "Can change venue",
+            "content_type": 13,
+            "codename": "change_venue"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 55,
+        "fields": {
+            "name": "Can delete venue",
+            "content_type": 13,
+            "codename": "delete_venue"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 56,
+        "fields": {
+            "name": "Can view venue",
+            "content_type": 13,
+            "codename": "view_venue"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 57,
+        "fields": {
+            "name": "Can add category",
+            "content_type": 14,
+            "codename": "add_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 58,
+        "fields": {
+            "name": "Can change category",
+            "content_type": 14,
+            "codename": "change_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 59,
+        "fields": {
+            "name": "Can delete category",
+            "content_type": 14,
+            "codename": "delete_category"
+        }
+    },
+    {
+        "model": "auth.permission",
+        "pk": 60,
+        "fields": {
+            "name": "Can view category",
+            "content_type": 14,
+            "codename": "view_category"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 1,
+        "fields": {
+            "app_label": "admin",
+            "model": "logentry"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 2,
+        "fields": {
+            "app_label": "auth",
+            "model": "permission"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 3,
+        "fields": {
+            "app_label": "auth",
+            "model": "group"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 4,
+        "fields": {
+            "app_label": "contenttypes",
+            "model": "contenttype"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 5,
+        "fields": {
+            "app_label": "sessions",
+            "model": "session"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 6,
+        "fields": {
+            "app_label": "sites",
+            "model": "site"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 7,
+        "fields": {
+            "app_label": "accounts",
+            "model": "user"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 8,
+        "fields": {
+            "app_label": "account",
+            "model": "emailaddress"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 9,
+        "fields": {
+            "app_label": "account",
+            "model": "emailconfirmation"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 10,
+        "fields": {
+            "app_label": "schedule",
+            "model": "eventinstance"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 11,
+        "fields": {
+            "app_label": "schedule",
+            "model": "organisation"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 12,
+        "fields": {
+            "app_label": "schedule",
+            "model": "event"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 13,
+        "fields": {
+            "app_label": "schedule",
+            "model": "venue"
+        }
+    },
+    {
+        "model": "contenttypes.contenttype",
+        "pk": 14,
+        "fields": {
+            "app_label": "schedule",
+            "model": "category"
+        }
+    },
+    {
+        "model": "sites.site",
+        "pk": 1,
+        "fields": {
+            "domain": "example.com",
+            "name": "example.com"
+        }
+    },
+    {
+        "model": "accounts.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$720000$2WW4SQzTxMHbzqIcp6evRs$UYBp0r37ZtpSx4jEa2nipJMmLCuez2KgtV+qcs1Qasc=",
+            "last_login": "2024-05-15T19:12:27.975Z",
+            "is_superuser": true,
+            "username": "adam",
+            "first_name": "",
+            "last_name": "",
+            "email": "adam@example.org",
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2024-05-15T19:12:16.924Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 1,
+        "fields": {
+            "name": "Penaultimate Customers",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 2,
+        "fields": {
+            "name": "Warwick KnitSoc",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 3,
+        "fields": {
+            "name": "BandSoc",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 4,
+        "fields": {
+            "name": "Mars' Bars",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 5,
+        "fields": {
+            "name": "Cobalt Magazine Society",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 6,
+        "fields": {
+            "name": "University of Warwick Wind Orchestra",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 7,
+        "fields": {
+            "name": "Warwick Folk Society",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 8,
+        "fields": {
+            "name": "elixir",
+            "description": "Musician duo"
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 9,
+        "fields": {
+            "name": "Warwick Pantomime Society",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 10,
+        "fields": {
+            "name": "Freshblood",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 11,
+        "fields": {
+            "name": "Brass Society",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 12,
+        "fields": {
+            "name": "Warwick Filmmaking Society",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 13,
+        "fields": {
+            "name": "Warwick Documentary Society",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 14,
+        "fields": {
+            "name": "Warwick Pole and Aerial Arts",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 15,
+        "fields": {
+            "name": "Pigeon Theatre",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 16,
+        "fields": {
+            "name": "Warwick Content Creation Society",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 17,
+        "fields": {
+            "name": "Opera Warwick",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 18,
+        "fields": {
+            "name": "Writing Society",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.organisation",
+        "pk": 19,
+        "fields": {
+            "name": "BoundBy",
+            "description": ""
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 1,
+        "fields": {
+            "organisation": null,
+            "submission_id": 2,
+            "title": "Izzy B",
+            "description": "A few songs with a Ukulele",
+            "estimated_duration": "00:00:10",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 2,
+        "fields": {
+            "organisation": 1,
+            "submission_id": 3,
+            "title": "Last Orders",
+            "description": "Last Orders is a student written show that was first put on at University of Warwick via Freshblood New Writing Society. Since the success of the first sold out run, we have made a few tweaks and refinements to take this magnificent show to Edinburgh Fringe! A brilliant opportunity for all involved with some first time Fringe goers.\r\n\r\nOur show follows Kenneth's first day working at the McGonagall Tavern, though as we are introduced to witches, a couple rats, the uptight manager, the creative yet unstable chef and the critic. Well, we are in for a ride.",
+            "estimated_duration": "00:00:50",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 3,
+        "fields": {
+            "organisation": 2,
+            "submission_id": 4,
+            "title": "KnitSoc creative showcase",
+            "description": "This will be an art gallery of knitted and crocheted/sewn or embroidered art that we can display on behalf of knitsoc.",
+            "estimated_duration": null,
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                8
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 4,
+        "fields": {
+            "organisation": null,
+            "submission_id": 5,
+            "title": "Chicken Soup with Barley",
+            "description": "Chicken Soup with Barley is a 1956 play by Arnold Wesker that grapples with the breakdown of an ideology and a family in parallel, synthesising the personal, political, and philosophical into an odyssey across decades that reveals the power of brotherhood even in a country that always seems in decline. Our production would modernise the text and give it a queer edge to explore the prescience of community and caring in the modern age.",
+            "estimated_duration": "00:01:30",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 5,
+        "fields": {
+            "organisation": 3,
+            "submission_id": 6,
+            "title": "BandSoc Showcase",
+            "description": "Several student bands will perform originals and covers of their choice, belonging to different genres such as rock, funk, indie, and more!",
+            "estimated_duration": "00:00:15",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 6,
+        "fields": {
+            "organisation": null,
+            "submission_id": 7,
+            "title": "Sleepy senzzz",
+            "description": "chill rap and Hip-Hop",
+            "estimated_duration": "00:00:10",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 7,
+        "fields": {
+            "organisation": 4,
+            "submission_id": 8,
+            "title": "Average Off-day For A Beatboxer",
+            "description": "A short ~20 minute set of solo beatboxing and joking about the professional music scene. Modern beatboxing isn't just about imitating a drumset: we literally speak music! Original tracks featured alongside covers.",
+            "estimated_duration": "00:00:20",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 8,
+        "fields": {
+            "organisation": 5,
+            "submission_id": 10,
+            "title": "Unveiled Treasures Creativity Workshop",
+            "description": "In this workshop, participants are invited to create pieces—ranging from photography and poetry to recipes and visual art—for our forthcoming magazine issue titled \"Unveiled Treasures.\" This issue aims to spotlight the hidden gems crafted by Warwick students, offering a platform to showcase their diverse talents that may not have had prior exposure.",
+            "estimated_duration": "00:01:00",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                6
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 9,
+        "fields": {
+            "organisation": null,
+            "submission_id": 11,
+            "title": "Mirage",
+            "description": "Rock/pop/indie band named Mirage. Energetic, upbeat band. Will likely play 3/4 originals alongside a cover.",
+            "estimated_duration": "00:00:25",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 10,
+        "fields": {
+            "organisation": null,
+            "submission_id": 12,
+            "title": "Siddhi",
+            "description": "An Indian Classical Dance form known as Bharatnatyam. It holds a cultural and spiritual significance. It was originally performed in temples as a form of devotion.",
+            "estimated_duration": "00:00:04",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": []
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 11,
+        "fields": {
+            "organisation": null,
+            "submission_id": 13,
+            "title": "the catharsis project",
+            "description": "2-3 original poems",
+            "estimated_duration": "00:00:07",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 12,
+        "fields": {
+            "organisation": null,
+            "submission_id": 14,
+            "title": "Art by Matthew Dickinson",
+            "description": "An Exhibition of Digital Art",
+            "estimated_duration": null,
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                8
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 13,
+        "fields": {
+            "organisation": 2,
+            "submission_id": 16,
+            "title": "Crocheting workshop",
+            "description": "It stitch and bitch but in the fab and on a Saturday and for beginners",
+            "estimated_duration": "00:02:00",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                6
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 14,
+        "fields": {
+            "organisation": 6,
+            "submission_id": 17,
+            "title": "Wind Orchestra Charity Playathon",
+            "description": "We are an unauditioned band made up of students and people from the community, who perform a wide variety of music from wind band classics to pop medleys and film music. We are playing continuously for several hours to raise money for charity as part of our annual Playathon!",
+            "estimated_duration": "00:12:00",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 15,
+        "fields": {
+            "organisation": null,
+            "submission_id": 18,
+            "title": "The Strongest Block Floor",
+            "description": "An artistic masterpiece depicting our well loved flatmate Daiki, of whom has been residing with us for almost a year. He will only be with us for a few more weeks, but his effect on Warwick University life will be felt for generations to come. No man who has been graced by his presence will be left without a smile, and this artform exists to immortalise and encapsulate only a fraction of his glory.",
+            "estimated_duration": null,
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                8
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 16,
+        "fields": {
+            "organisation": null,
+            "submission_id": 19,
+            "title": "Art By Balqis: The Beauty of Malaysian Culture",
+            "description": "I’m a self-taught acrylic, acrylic paint pouring, watercolour and oil painter. Recently, I just released a watercolour Eid card collection during Eid. The designs range from Malaysian Batik motives and traditional Malay delicacies. For this festival, I wish to create 3-4 new artworks relating to the theme of the diversity of the Malaysian culture. I wish to display my artwork during Warwick’ Art Festival.",
+            "estimated_duration": null,
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                8
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 17,
+        "fields": {
+            "organisation": null,
+            "submission_id": 20,
+            "title": "Prav’s Originals",
+            "description": "It’s me and my guitar, can get a band together performing some of my original music and maybe a few covers if wanted. I run the university open mic on campus and it’s a smiled vibe to the performances there.",
+            "estimated_duration": "00:00:35",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 18,
+        "fields": {
+            "organisation": null,
+            "submission_id": 21,
+            "title": "Poetry by Apurva Wahul",
+            "description": "I have been writing poems for a long time and I would love to share them with everyone.",
+            "estimated_duration": "00:00:15",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 19,
+        "fields": {
+            "organisation": null,
+            "submission_id": 22,
+            "title": "Falasteen (tapestry)",
+            "description": "I crochet tapestry wall-hangings which have arabic calligraphy and/or other designs which are used as decoration or art pieces. This piece is called Falasteen, and is has aspects of the Palestinian identity, a white dove, and olive branches, as well as some calligraphy. What my pieces do is show Islam, or Islamic concepts as something artistic. This piece is both a piece of activism, and something artistic.",
+            "estimated_duration": null,
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                8
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 20,
+        "fields": {
+            "organisation": null,
+            "submission_id": 23,
+            "title": "Nikkon Banerjee: Classical Dance",
+            "description": "",
+            "estimated_duration": "00:00:03",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": []
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 21,
+        "fields": {
+            "organisation": null,
+            "submission_id": 23,
+            "title": "Nikkon Banerjee: Singing",
+            "description": "",
+            "estimated_duration": null,
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 22,
+        "fields": {
+            "organisation": null,
+            "submission_id": 25,
+            "title": "Yiming Liu: Traditional Chinese folk song",
+            "description": "A traditional Chinese song with accompaniment",
+            "estimated_duration": "00:00:03",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 23,
+        "fields": {
+            "organisation": null,
+            "submission_id": 26,
+            "title": "DJ: Eyes on the Fire",
+            "description": "Dj and composer of electronic dance music. Features performances on Boiler Room and Rinse FM",
+            "estimated_duration": "00:00:30",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 24,
+        "fields": {
+            "organisation": 7,
+            "submission_id": 27,
+            "title": "Summer Ceilidh",
+            "description": "We’ll be playing a variety of folk tunes for you to dance to!",
+            "estimated_duration": "00:02:00",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                2,
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 25,
+        "fields": {
+            "organisation": null,
+            "submission_id": 28,
+            "title": "South Indian Street Dance",
+            "description": "2-3 minute dance to a medley of energetic south-indian songs to bring energy to the audience",
+            "estimated_duration": "00:00:03",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 26,
+        "fields": {
+            "organisation": 8,
+            "submission_id": 29,
+            "title": "Acoustic New Music Performance with ‘elixir’",
+            "description": "Indie/pop music - guitar and singing. Original songs plus one original arrangement of a cover. One lead vocalist, one vocalist/lead guitarist.",
+            "estimated_duration": "00:00:35",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 27,
+        "fields": {
+            "organisation": null,
+            "submission_id": 30,
+            "title": "Yang Zhao",
+            "description": "Song: Young and Beautiful",
+            "estimated_duration": "00:00:04",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 28,
+        "fields": {
+            "organisation": null,
+            "submission_id": 31,
+            "title": "Beck Sewart",
+            "description": "I will either be reading a short story or something poetry",
+            "estimated_duration": "00:00:30",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 29,
+        "fields": {
+            "organisation": null,
+            "submission_id": 32,
+            "title": "Chufan Wang",
+            "description": "I want to sing my favourite song from my favourite singer.",
+            "estimated_duration": "00:00:04",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 30,
+        "fields": {
+            "organisation": 9,
+            "submission_id": 33,
+            "title": "Jack in the Beanstalk",
+            "description": "A 15-20 min version of Jack and the Beanstalk with some possible twists along the way!",
+            "estimated_duration": "00:00:20",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                1,
+                7
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 31,
+        "fields": {
+            "organisation": 10,
+            "submission_id": 34,
+            "title": "Blue Moon",
+            "description": "A heartwarming story of acceptance and grief. When Robin's best friend Devitt dies of a terminal illness, Robin copes with the help of Devitt's childhood imaginary friend Gwen.",
+            "estimated_duration": "00:00:30",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 32,
+        "fields": {
+            "organisation": null,
+            "submission_id": 38,
+            "title": "Sreekeerthana Kamalesh",
+            "description": "Indian Gujarati Dance Form Called Garba\r\n\r\nGarba is a popular form of folk dance that originated in the state of Gujarat in India. Traditionally, it is performed during the nine-day Hindu festival of Navaratri. It is a joyful style of dance, based on a circular pattern and characterized by a sweeping action from side to side.",
+            "estimated_duration": "00:00:07",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 33,
+        "fields": {
+            "organisation": null,
+            "submission_id": 36,
+            "title": "The Art of Ellie Stocker",
+            "description": "",
+            "estimated_duration": null,
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                8
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 34,
+        "fields": {
+            "organisation": 11,
+            "submission_id": 37,
+            "title": "Symphonic Brass",
+            "description": "We play a mixture of film scores, traditional brass music and more. We are a small ensemble of high level players who sound amazing when we perform.",
+            "estimated_duration": "00:00:15",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 35,
+        "fields": {
+            "organisation": null,
+            "submission_id": 39,
+            "title": "Elias Desalegn Girma: It doesn’t hurt to try",
+            "description": "Solo performance with guitar and microphone. The songs are about people, places and things. My practice as a musician is grounded in dislocation and movement.",
+            "estimated_duration": "00:00:10",
+            "preferred_occurrences": 2,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 36,
+        "fields": {
+            "organisation": 6,
+            "submission_id": 40,
+            "title": "Flute Choir",
+            "description": "A selection of pieces covering a wide variety of styles, arranged for flute.",
+            "estimated_duration": "00:00:25",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 37,
+        "fields": {
+            "organisation": 12,
+            "submission_id": 41,
+            "title": "Filmmaking Workshop",
+            "description": "a camera workshop",
+            "estimated_duration": "00:01:00",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                6
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 38,
+        "fields": {
+            "organisation": 12,
+            "submission_id": 41,
+            "title": "screen writing workshop",
+            "description": "",
+            "estimated_duration": "00:01:00",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                6
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 39,
+        "fields": {
+            "organisation": 12,
+            "submission_id": 41,
+            "title": "24 hour film competition showcase",
+            "description": "",
+            "estimated_duration": "00:02:00",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 40,
+        "fields": {
+            "organisation": null,
+            "submission_id": 42,
+            "title": "Sean Cabatana: An evening of modern guitar",
+            "description": "A performance of solo electric guitar, playing modern pieces by world-renowned guitar virtuoso Ichika Nito, as well as new composed pieces inspired by him being brought to the light.",
+            "estimated_duration": "00:00:30",
+            "preferred_occurrences": 2,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 41,
+        "fields": {
+            "organisation": 13,
+            "submission_id": 43,
+            "title": "Art and Reality: Warwick Student Documentary Production",
+            "description": "Five documentaries made by Warwick student in total. They cover different themes, including the use of AI in art, marine life, student activism and a football team at Warwick. They are all the entries to the Warwick Documentary Society, but we would like to ensure that credits are given to all student filmmakers. We hope that the screening can encourage students to create their own documentaries and appreciate creative talents around them.",
+            "estimated_duration": "00:01:35",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 42,
+        "fields": {
+            "organisation": null,
+            "submission_id": 44,
+            "title": "Madhumitha: Bharatnatyam showcase",
+            "description": "A 2000 year old traditional dance form from southern part of India",
+            "estimated_duration": "00:00:02",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 43,
+        "fields": {
+            "organisation": 14,
+            "submission_id": 45,
+            "title": "Pole/Aerial Arts",
+            "description": "There will be 2 aerial hoop dance performers and 4 pole dance performers. They would each have a 2-4 minute routine to perform in their chosen area. Some routines would be artistic and tell a mini story, and others would show off their strength and flexibility.",
+            "estimated_duration": "00:00:20",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 44,
+        "fields": {
+            "organisation": null,
+            "submission_id": 46,
+            "title": "Chinese Dance Team",
+            "description": "Coquettish, Peonies always bloom, Enigmatic Heart\r\nTwo sole Chinese classical dance.one deux modern and Chinese style",
+            "estimated_duration": "00:00:10",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 45,
+        "fields": {
+            "organisation": null,
+            "submission_id": 47,
+            "title": "Anokh Tiwana-Parmar: Paul Forthright",
+            "description": "a very short solo monologue",
+            "estimated_duration": "00:00:10",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 46,
+        "fields": {
+            "organisation": 15,
+            "submission_id": 48,
+            "title": "Bird Watching",
+            "description": "Bird Watching is a highly physical devised performance exploring the exhaustion of trying to adapt to the male gaze. Part nature documentary, part rave, it questions what it means to be looked at and the complexities of wanting to be desired.",
+            "estimated_duration": "00:00:25",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 47,
+        "fields": {
+            "organisation": null,
+            "submission_id": 49,
+            "title": "The Brwn Space",
+            "description": "plethora of performers from singing to rapping to spoken word and comedy",
+            "estimated_duration": "00:01:00",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 48,
+        "fields": {
+            "organisation": 16,
+            "submission_id": 50,
+            "title": "Creator Showcase",
+            "description": "We would like to set up a room of stalls displaying the work of our society members, with a central table for art + crafts:\r\n- The work shown will be a mix of art forms, including some showcases of 2D/3D models, cosplay projects and traditional/digital art pieces.\r\n- As well as this, we would like to set up a table in the centre of the room with some arts + crafting supplies for people to come and try out.\r\n- Ideally, we'd like to have this space from 10am-5pm on Sunday, but we could possibly do this on Monday if needed as well.",
+            "estimated_duration": "00:07:00",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                8
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 49,
+        "fields": {
+            "organisation": null,
+            "submission_id": 51,
+            "title": "Chaotic Space",
+            "description": "Fusion between Indian and Western music with vocals piano and guitar.",
+            "estimated_duration": "00:00:10",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 50,
+        "fields": {
+            "organisation": null,
+            "submission_id": 52,
+            "title": "Alex Lukic",
+            "description": "",
+            "estimated_duration": "00:00:04",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 51,
+        "fields": {
+            "organisation": null,
+            "submission_id": 53,
+            "title": "Adèle",
+            "description": "Spoken word written by me that I hope others can enjoy and relate to",
+            "estimated_duration": "00:00:10",
+            "preferred_occurrences": 2,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 52,
+        "fields": {
+            "organisation": null,
+            "submission_id": 54,
+            "title": "Kawai: Mashup of Indian and English songs",
+            "description": "We are a group of postgraduate students passionate about music. We get together and jam on songs with different genres.",
+            "estimated_duration": "00:00:45",
+            "preferred_occurrences": 2,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 53,
+        "fields": {
+            "organisation": null,
+            "submission_id": 55,
+            "title": "Behind the Curtain / Wired Tensions",
+            "description": "Step into the world of your wildest dreams as kishan and danny bring to life an original piece of fan \"fiction\" through the power of spoken word. In this captivating (erotic?) performance, we will take you on an emotional journey where beloved classic characters come to life in new and unexpected ways. Through the rhythm of our words and the depth of our storytelling, you'll experience the excitement, the tension, and the romance of our enemies to lovers prophecy.",
+            "estimated_duration": "00:00:15",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 54,
+        "fields": {
+            "organisation": null,
+            "submission_id": 56,
+            "title": "Kieran Persaud: Piano Favs Compilation",
+            "description": "Piano performance of an array of hip hop tunes within the last 20 years",
+            "estimated_duration": null,
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 55,
+        "fields": {
+            "organisation": 17,
+            "submission_id": 57,
+            "title": "Opera Scenes by Opera Warwick",
+            "description": "A collection of opera scenes, from our exec",
+            "estimated_duration": "00:00:25",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                1,
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 56,
+        "fields": {
+            "organisation": null,
+            "submission_id": 58,
+            "title": "Gabriel Carvalho: Brazilian piano",
+            "description": "Classic and modern Brazilian music played on piano",
+            "estimated_duration": "00:00:30",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 57,
+        "fields": {
+            "organisation": 18,
+            "submission_id": 59,
+            "title": "Writing Workshop",
+            "description": "Workshop will help develop potential submissions for the summer edition of Kamena. We’ll need a room to hold the workshop in.",
+            "estimated_duration": "00:01:00",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                8
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 58,
+        "fields": {
+            "organisation": 19,
+            "submission_id": 60,
+            "title": "Poetry Workshop",
+            "description": "poetry workshop :)",
+            "estimated_duration": "00:01:00",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                6
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 59,
+        "fields": {
+            "organisation": 19,
+            "submission_id": 61,
+            "title": "Poetry Reading",
+            "description": "BoundBy poetry reading :)",
+            "estimated_duration": "00:00:20",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                4
+            ]
+        }
+    },
+    {
+        "model": "schedule.event",
+        "pk": 60,
+        "fields": {
+            "organisation": null,
+            "submission_id": 62,
+            "title": "T-Shirt tie dye",
+            "description": "Participants will have the opportunity to tie dye and walk away with their very own tie dye shirt!",
+            "estimated_duration": "00:01:00",
+            "preferred_occurrences": 1,
+            "admins": [],
+            "participants": [],
+            "categories": [
+                6
+            ]
+        }
+    },
+    {
+        "model": "schedule.venue",
+        "pk": 1,
+        "fields": {
+            "name": "Windmill Hill Stage",
+            "address": "Bottom of Windmill Hill (behind the dinos)"
+        }
+    },
+    {
+        "model": "schedule.venue",
+        "pk": 2,
+        "fields": {
+            "name": "FAB0.20",
+            "address": "Faculty of Arts Building"
+        }
+    },
+    {
+        "model": "schedule.venue",
+        "pk": 3,
+        "fields": {
+            "name": "FAB0.19",
+            "address": "Faculty of Arts Building"
+        }
+    },
+    {
+        "model": "schedule.venue",
+        "pk": 4,
+        "fields": {
+            "name": "FAB Terrace",
+            "address": "Faculty of Arts Building"
+        }
+    },
+    {
+        "model": "schedule.venue",
+        "pk": 5,
+        "fields": {
+            "name": "Curiositea",
+            "address": "Warwick SU"
+        }
+    },
+    {
+        "model": "schedule.venue",
+        "pk": 6,
+        "fields": {
+            "name": "Windmill Hill",
+            "address": "Behind Dinos"
+        }
+    },
+    {
+        "model": "schedule.category",
+        "pk": 1,
+        "fields": {
+            "name": "Theatre"
+        }
+    },
+    {
+        "model": "schedule.category",
+        "pk": 2,
+        "fields": {
+            "name": "Dance"
+        }
+    },
+    {
+        "model": "schedule.category",
+        "pk": 3,
+        "fields": {
+            "name": "Music"
+        }
+    },
+    {
+        "model": "schedule.category",
+        "pk": 4,
+        "fields": {
+            "name": "Spoken Word"
+        }
+    },
+    {
+        "model": "schedule.category",
+        "pk": 5,
+        "fields": {
+            "name": "Film"
+        }
+    },
+    {
+        "model": "schedule.category",
+        "pk": 6,
+        "fields": {
+            "name": "Workshop"
+        }
+    },
+    {
+        "model": "schedule.category",
+        "pk": 7,
+        "fields": {
+            "name": "Comedy"
+        }
+    },
+    {
+        "model": "schedule.category",
+        "pk": 8,
+        "fields": {
+            "name": "Exhibition"
+        }
+    }
+]
