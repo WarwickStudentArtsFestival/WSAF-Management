@@ -63,9 +63,8 @@ jobs:
           NODE_CMD_PREFIX: ""
   test:
     runs-on: ubuntu-latest
-    name: Tests install script
+    name: Tests
     env:
-      BUILD_DIR: /home/runner/work/django-base-site/new_project/
       SECRET_KEY: secret-key-for-testing-only
       READ_DOT_ENV_FILE: on
       DOCKER_COMPOSE_PREFIX: docker compose run -u root --rm --no-deps web
@@ -73,15 +72,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Use Just for running commands
         run: curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to /usr/local/bin
-      - name: Test install script
-        run: |
-          ./scripts/start_new_project "example" ${GITHUB_REF#refs/heads/} 1 ${{ env.BUILD_DIR }}
       - name: Build docker images
-        working-directory: ${{ env.BUILD_DIR }}
         run: docker compose build web node
       - name: Build assets
-        working-directory: ${{ env.BUILD_DIR }}
         run: just build_frontend
       - name: Run tests
-        working-directory: ${{ env.BUILD_DIR }}
         run: ${{ env.DOCKER_COMPOSE_PREFIX }} pytest --cov --ds=config.settings.test_runner
