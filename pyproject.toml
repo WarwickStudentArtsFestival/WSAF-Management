@@ -94,6 +94,7 @@ indent_size=2
 
 [tool.ruff]
 line-length = 120
+exclude = ["schedule/management/commands/*"]
 
 [tool.ruff.lint]
 select = [

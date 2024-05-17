@@ -7,6 +7,7 @@ class Organisation(models.Model):
     description = models.TextField(blank=True, null=True)
 
     def __str__(self):
+        """Return the name of the organisation."""
         return self.name
 
 
@@ -22,6 +23,7 @@ class Event(models.Model):
     categories = models.ManyToManyField("Category", blank=True)
 
     def __str__(self):
+        """Return the key info about the event (name, title, organisation)."""
         name_string = ""
         if self.submission_id is not None:
             name_string += f"{self.submission_id} - "
@@ -40,6 +42,7 @@ class EventInstance(models.Model):
     parent = models.ForeignKey("self", on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
+        """Return the key info about the event occurance (event, venue, start, end)."""
         start_time = timezone.localtime(self.start).strftime("%A %H:%M")
         end_time = timezone.localtime(self.end).strftime("%H:%M")
         return f"{self.event} at {self.venue} from {start_time} to {end_time}"
@@ -50,6 +53,7 @@ class Venue(models.Model):
     address = models.TextField()
 
     def __str__(self):
+        """Return the name of the venue."""
         return self.name
 
 
@@ -61,4 +65,5 @@ class Category(models.Model):
         verbose_name_plural = "categories"
 
     def __str__(self):
+        """Return the name of the category."""
         return self.name
