@@ -27,7 +27,7 @@ services:
 
   web:
     container_name: web
-    image: wsaf-management:python
+    image: ghcr.io/warwickstudentartsfestival/wsaf-management:main
     init: true
     networks:
       - wsaf-network
