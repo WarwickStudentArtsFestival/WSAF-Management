@@ -1,0 +1,60 @@
+name: Build, Release and Publish Website
+
+on:
+  push:
+    branches: ["main"]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+
+  release:
+    name: 'Build, Package and Release'
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.ref_name }}
+
+    permissions:
+      packages: write
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v2
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract tags and labels for Docker release
+        id: meta
+        uses: docker/metadata-action@v4
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          dockerfile: config/docker/Dockerfile.web
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  # deploy-main:
+  #   name: 'Deploy to Main'
+  #   needs: [release]
+
+  #   runs-on: ubuntu-latest
+  #   environment:
+  #     name: main
+  #     url: https://wsaf-management-main.containers.uwcs.co.uk
+  #   steps:
+  #     - name: Trigger Portainer Deployment
+  #       uses: newarifrh/portainer-service-webhook@v1
+  #       with:
+  #         webhook_url: ${{ secrets.PORTAINER_WEBHOOK_URL }}
