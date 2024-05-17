@@ -3,20 +3,18 @@
 services:
 
   db:
-    container_name: db
+    container_name: wsaf-mgmt-db
     image: postgres:latest
     init: true
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     networks:
       - wsaf-network
-    ports:
-      - "5432:5432"
     env_file:
       - stack.env
 
   redis:
-    container_name: redis
+    container_name: wsaf-mgmt-redis
     image: redis:7.0
     init: true
     command: ["redis-server", "--appendonly", "yes"]
@@ -26,7 +24,7 @@ services:
       - wsaf-network
 
   web:
-    container_name: web
+    container_name: wsaf-mgmt-web
     image: ghcr.io/warwickstudentartsfestival/wsaf-management:main
     init: true
     networks:
