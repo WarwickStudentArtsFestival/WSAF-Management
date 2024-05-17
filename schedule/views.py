@@ -20,7 +20,8 @@ class AllScheduleDSFeed(Feed):
 
     def item_description(self, item):
         json_str = json.dumps(item.get_json(), cls=DjangoJSONEncoder)
-        return str(json_str)
+        json_str = json_str.replace(" ", "%20")
+        return json_str
 
     # item_link is only needed if NewsItem has no get_absolute_url method.
     def item_link(self, item):
