@@ -29,8 +29,8 @@ services:
     init: true
     networks:
       - wsaf-network
-    ports:
-      - "8000"
+    expose:
+    - "8080"
     env_file:
       - stack.env
 
@@ -41,6 +41,8 @@ services:
     environment:
       USE_DOCKER: 'on'
       DJANGO_SETTINGS_MODULE: config.settings
+      VIRTUAL_HOST: wsaf-management-main
+      VIRTUAL_PORT: 8080
 
 volumes:
   postgres_data:

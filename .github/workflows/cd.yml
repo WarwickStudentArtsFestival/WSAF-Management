@@ -45,16 +45,16 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
-  # deploy-main:
-  #   name: 'Deploy to Main'
-  #   needs: [release]
+  deploy-main:
+    name: 'Deploy to Main'
+    needs: [release]
 
-  #   runs-on: ubuntu-latest
-  #   environment:
-  #     name: main
-  #     url: https://wsaf-management-main.containers.uwcs.co.uk
-  #   steps:
-  #     - name: Trigger Portainer Deployment
-  #       uses: newarifrh/portainer-service-webhook@v1
-  #       with:
-  #         webhook_url: ${{ secrets.PORTAINER_WEBHOOK_URL }}
+    runs-on: ubuntu-latest
+    environment:
+      name: main
+      url: https://wsaf-management-main.containers.uwcs.co.uk
+    steps:
+      - name: Trigger Portainer Deployment
+        uses: newarifrh/portainer-service-webhook@v1
+        with:
+          webhook_url: ${{ secrets.PORTAINER_WEBHOOK_URL }}
