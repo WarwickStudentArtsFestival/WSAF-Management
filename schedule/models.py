@@ -49,7 +49,7 @@ class EventInstance(models.Model):
 
     def get_json(self):
         """Return the event instance as a json object."""
-        return {
+        json_dict = {
             "organiser": self.event.organisation.name if self.event.organisation is not None else None,
             "title": self.event.title,
             "description": self.event.description,
@@ -57,8 +57,14 @@ class EventInstance(models.Model):
             "start": self.start,
             "end": self.end,
             "venue": self.venue.name,
-            "parent": self.parent,
         }
+
+        children = EventInstance.objects.filter(parent=self).all()
+        children_json = [child.get_json() for child in children]
+        if len(children_json) > 0:
+            json_dict["sub-events"] = children_json
+
+        return json_dict
 
 
 class Venue(models.Model):
