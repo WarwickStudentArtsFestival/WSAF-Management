@@ -9,7 +9,6 @@
 **/__pycache__/*
 collected_static/
 db.sqlite
-docs_site/
 htmlcov
 latest.dump
 node_modules

@@ -56,7 +56,7 @@ INSTALLED_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
     "storages",
-    "schedule.apps.ScheduleConfig"
+    "schedule.apps.ScheduleConfig",
 ]
 
 MIDDLEWARE = [

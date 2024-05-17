@@ -11,15 +11,16 @@ class EventInstanceInline(admin.TabularInline):
 class EventAdmin(admin.ModelAdmin):
     inlines = [EventInstanceInline]
 
-    list_display = ('__str__', 'preferred_occurrences', 'assigned_instances')
+    list_display = ("__str__", "preferred_occurrences", "assigned_instances")
 
     def assigned_instances(self, obj):
         return obj.eventinstance_set.count()
 
-class EventInstanceAdmin(admin.ModelAdmin):
-    list_display = ('event', 'venue', 'start', 'end', 'venue', 'parent')
 
-    ordering = ('start',)
+class EventInstanceAdmin(admin.ModelAdmin):
+    list_display = ("event", "venue", "start", "end", "venue", "parent")
+
+    ordering = ("start",)
 
 
 admin.site.register(Organisation)

@@ -39,7 +39,6 @@ reset := `tput -Txterm sgr0`
     rm -rf .pytest_cache/
     rm -rf .ruff_cache/
     rm -rf collected_static/
-    rm -rf docs_site/
     rm -rf public/static/dist/
     rm -rf .coverage
 
@@ -135,11 +134,6 @@ db_restore dump_file="":
 
 # Lint everything
 lint: lint_js lint_sass lint_html lint_py lint_migrations lint_types
-
-# Lint docs with mkdocs-linkcheck
-@lint_docs:
-    just _start_msg "Check mkdocs docs using mkdocs-linkcheck"
-    {{ python_cmd_prefix }} mkdocs-linkcheck ./docs
 
 # Lint HTML
 @lint_html:
