@@ -13,7 +13,7 @@ services:
     ports:
       - "5432:5432"
     env_file:
-      - .env
+      - stack.env
 
   redis:
     container_name: redis
@@ -34,7 +34,7 @@ services:
     ports:
       - "8000"
     env_file:
-      - .env
+      - stack.env
 
     depends_on:
       - db
@@ -47,3 +47,6 @@ services:
 volumes:
   postgres_data:
   redis_data:
+
+networks:
+  wsaf-network:
