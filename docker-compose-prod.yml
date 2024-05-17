@@ -8,6 +8,8 @@ services:
     init: true
     volumes:
       - postgres_data:/var/lib/postgresql/data/
+    networks:
+      - wsaf-network
     ports:
       - "5432:5432"
     env_file:
@@ -20,26 +22,21 @@ services:
     command: ["redis-server", "--appendonly", "yes"]
     volumes:
       - redis_data:/data
+    networks:
+      - wsaf-network
 
   web:
     container_name: web
     image: wsaf-management:python
     init: true
-    build:
-      context: .
-      dockerfile: config/docker/Dockerfile.web
-      target: dev
-
-    command: sh -c "./manage.py migrate --noinput && ./manage.py runserver 0.0.0.0:8000"
-
-    volumes:
-      - .:/srv/app:cached
-
+    networks:
+      - wsaf-network
     ports:
-      - "8000:8000"
+      - "8000"
+    env_file:
+      - .env
 
     depends_on:
-      - node
       - db
       - redis
 
@@ -47,28 +44,6 @@ services:
       USE_DOCKER: 'on'
       DJANGO_SETTINGS_MODULE: config.settings
 
-  node:
-    container_name: node
-    image: wsaf-management:node
-    build:
-      context: .
-      dockerfile: config/docker/Dockerfile.node
-    init: true
-    working_dir: /srv/app
-
-    command: sh -c "npm run dev"
-
-    volumes:
-      - .:/srv/app
-      - node_modules:/srv/app/node_modules
-
-    ports:
-      - "3000:3000"
-
-    environment:
-      NODE_ENV: development
-
 volumes:
   postgres_data:
   redis_data:
-  node_modules:

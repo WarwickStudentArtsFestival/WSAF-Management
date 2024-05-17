@@ -1,6 +1,6 @@
 import 'config/base.just'
 
-project_slug := 'django-base-site'
+project_slug := 'wsaf-management'
 
 # List available commands
 @_default:
