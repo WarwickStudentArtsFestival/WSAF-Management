@@ -229,7 +229,7 @@ ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 
 # CUSTOM Django Base Site ALLAUTH settings used in the custom adapter (apps.accounts.auth_adapter)
 ACCOUNT_ADAPTER = "apps.accounts.auth_adapter.AccountAdapter"
-ACCOUNT_SIGNUP_OPEN = False
+ACCOUNT_SIGNUP_OPEN = True
 ACCOUNT_SHOW_POST_LOGIN_MESSAGE = False
 
 # See https://github.com/migonzalvar/dj-email-url for more examples on how to set the EMAIL_URL
