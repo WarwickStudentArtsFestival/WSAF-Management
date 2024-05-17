@@ -54,6 +54,10 @@ INSTALLED_APPS = [
     "maintenance_mode",
     "allauth",
     "allauth.account",
+    "allauth.socialaccount",
+    # social providers
+    "allauth.socialaccount.providers.github",
+    "allauth.socialaccount.providers.google",
     "crispy_forms",
     "crispy_bootstrap5",
     "storages",
@@ -206,7 +210,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
 
 SITE_ID = 1
-SITE_NAME = "Django Base Site"
+SITE_NAME = "WSAF Management"
 
 # DJANGO DEBUG TOOLBAR SETTINGS
 if DEBUG is True:
