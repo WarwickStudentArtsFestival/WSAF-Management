@@ -5,6 +5,7 @@ from django.views.generic import TemplateView
 
 from apps.accounts.views import NameChange
 from apps.base.views import http_404, http_500
+from schedule.views import AllScheduleDSFeed
 
 # Includes
 urlpatterns: list[URLResolver | URLPattern] = [path(r"admin/", admin.site.urls)]
@@ -17,6 +18,8 @@ urlpatterns += [
     path("404/", http_404),
     path("accounts/name/", NameChange.as_view(), name="account_change_name"),
     path("accounts/", include("allauth.urls")),
+
+    path("ds/feed/", AllScheduleDSFeed()),
 ]
 
 # Debug/Development URLs

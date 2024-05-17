@@ -47,6 +47,19 @@ class EventInstance(models.Model):
         end_time = timezone.localtime(self.end).strftime("%H:%M")
         return f"{self.event} at {self.venue} from {start_time} to {end_time}"
 
+    def get_json(self):
+        """Return the event instance as a json object."""
+        return {
+            "organiser": self.event.organisation.name if self.event.organisation is not None else None,
+            "title": self.event.title,
+            "description": self.event.description,
+            "categories": [category.name for category in self.event.categories.all()],
+            "start": self.start,
+            "end": self.end,
+            "venue": self.venue.name,
+            "parent": self.parent,
+        }
+
 
 class Venue(models.Model):
     name = models.CharField(max_length=200)
