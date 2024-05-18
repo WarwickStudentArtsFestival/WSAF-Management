@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    # "allauth.socialaccount.providers.github",
     "crispy_forms",
     "crispy_bootstrap5",
     "storages",
@@ -59,6 +60,7 @@ INSTALLED_APPS = [
     "base",
     "accounts",
     "maintenance_mode",
+    "warwicksso",
 ]
 
 MIDDLEWARE = [
