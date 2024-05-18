@@ -3,8 +3,8 @@ from django.test import override_settings
 
 import pytest
 
-from apps.base.templatetags.vite import vite_asset, vite_hmr_client
-from apps.base.tests import BaseTest
+from base.templatetags.vite import vite_asset, vite_hmr_client
+from base.tests import BaseTest
 
 VITE_MANIFEST_FILE = settings.BASE_DIR / "apps" / "base" / "tests" / "vite_manifest.json"
 VITE_OUTPUT_DIR = "dist/"

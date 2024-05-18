@@ -49,19 +49,16 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "apps.base",
-    "apps.accounts",
-    "maintenance_mode",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
-    # social providers
-    "allauth.socialaccount.providers.github",
-    "allauth.socialaccount.providers.google",
     "crispy_forms",
     "crispy_bootstrap5",
     "storages",
     "schedule.apps.ScheduleConfig",
+    "base",
+    "accounts",
+    "maintenance_mode",
 ]
 
 MIDDLEWARE = [
@@ -91,7 +88,7 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "maintenance_mode.context_processors.maintenance_mode",
-                "apps.base.context_processors.site_name",
+                "base.context_processors.site_name",
             ],
         },
     },
@@ -219,7 +216,10 @@ if DEBUG is True:
     DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 
 # ALLAUTH SETTINGS (https://django-allauth.readthedocs.io/en/latest/configuration.html)
-AUTHENTICATION_BACKENDS = ["allauth.account.auth_backends.AuthenticationBackend"]
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    "allauth.account.auth_backends.AuthenticationBackend"
+]
 LOGIN_REDIRECT_URL = "/"
 ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_AUTHENTICATION_METHOD = "email"
@@ -232,7 +232,7 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 
 # CUSTOM Django Base Site ALLAUTH settings used in the custom adapter (apps.accounts.auth_adapter)
-ACCOUNT_ADAPTER = "apps.accounts.auth_adapter.AccountAdapter"
+ACCOUNT_ADAPTER = "accounts.auth_adapter.AccountAdapter"
 ACCOUNT_SIGNUP_OPEN = True
 ACCOUNT_SHOW_POST_LOGIN_MESSAGE = False
 

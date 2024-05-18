@@ -3,8 +3,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from django.views import generic
 
-from apps.accounts.models import User
-from apps.base.forms import NameForm
+from accounts.models import User
+from base.forms import NameForm
 
 
 class NameChange(LoginRequiredMixin, generic.FormView):  # type: ignore

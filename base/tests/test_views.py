@@ -1,4 +1,4 @@
-from apps.base.tests import BaseTest
+from base.tests import BaseTest
 
 
 class TestIndexView(BaseTest):

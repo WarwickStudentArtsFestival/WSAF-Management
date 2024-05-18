@@ -4,8 +4,8 @@ from django.forms import model_to_dict
 
 from allauth.account.models import EmailAddress
 
-from apps.accounts.models import User
-from apps.base.tests import BaseTest
+from accounts.models import User
+from base.tests import BaseTest
 
 
 class BaseAccountViewTest(BaseTest):
