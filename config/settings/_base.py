@@ -191,14 +191,10 @@ else:
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # CACHE SETTINGS
-# Redis scheme docs: https://redis-py.readthedocs.io/en/stable/connections.html#redis.connection.ConnectionPool.from_url
-REDIS_URL = env("REDIS_URL", "redis://redis:6379/0")
-REDIS_PREFIX = env("REDIS_PREFIX", default="")
 CACHES = {
     "default": {
-        "BACKEND": "django.core.cache.backends.redis.RedisCache",
-        "LOCATION": REDIS_URL,
-        "KEY_PREFIX": REDIS_PREFIX,
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "wsaf-cache",
     }
 }
 
