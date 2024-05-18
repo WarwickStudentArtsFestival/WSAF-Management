@@ -49,6 +49,8 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "base",
+    "accounts",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
@@ -57,8 +59,6 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",
     "storages",
     "schedule.apps.ScheduleConfig",
-    "base",
-    "accounts",
     "maintenance_mode",
     "warwicksso",
 ]
