@@ -10,7 +10,10 @@
 
 {% block content %}
   <h1>{% trans "Sign In" %}</h1>
-  {% if socialaccount.providers %}
+  {% if SOCIALACCOUNT_ENABLED %}
+        {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
+    {% endif %}
+  {% comment %} {% if socialaccount.providers %}
     <p>
       {% blocktrans with site.name as site_name %}Please sign in with one
 of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
@@ -24,7 +27,7 @@ below:{% endblocktrans %}
       <div class="login-or">{% trans "or" %}</div>
     </div>
     {% include "socialaccount/snippets/login_extra.html" %}
-  {% endif %}
+  {% endif %} {% endcomment %}
   <p>
     {% blocktrans %}If you have not created an account yet, then please
 <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
