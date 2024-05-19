@@ -13,16 +13,6 @@ services:
     env_file:
       - stack.env
 
-  redis:
-    container_name: wsaf-mgmt-redis
-    image: redis:7.0
-    init: true
-    command: ["redis-server", "--appendonly", "yes"]
-    volumes:
-      - redis_data:/data
-    networks:
-      - wsaf-network
-
   web:
     container_name: wsaf-mgmt-web
     image: ghcr.io/warwickstudentartsfestival/wsaf-management:main
@@ -36,7 +26,6 @@ services:
 
     depends_on:
       - db
-      - redis
 
     environment:
       USE_DOCKER: 'on'
@@ -46,7 +35,6 @@ services:
 
 volumes:
   postgres_data:
-  redis_data:
 
 networks:
   wsaf-network:

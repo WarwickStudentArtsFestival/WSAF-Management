@@ -95,4 +95,4 @@ USER app
 
 COPY --from=js_assets --chown=app:app /srv/app/public/static/ ./collected_static
 
-CMD ["uwsgi", "--ini", "config/uwsgi.ini", "--http", "0.0.0.0:8080"]
+CMD python manage.py migrate && uwsgi --ini config/uwsgi.ini --http 0.0.0.0:8080
