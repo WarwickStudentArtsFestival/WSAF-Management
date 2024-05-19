@@ -162,29 +162,13 @@ STORAGES = {
     },
 }
 
-
-if STORAGES["default"]["BACKEND"].endswith("MediaS3Storage") is True:
-    STORAGES["staticfiles"]["BACKEND"] = env("STATICFILES_STORAGE")
-    AWS_ACCESS_KEY_ID = env("AWS_ACCESS_KEY_ID")
-    AWS_SECRET_ACCESS_KEY = env("AWS_SECRET_ACCESS_KEY")
-    AWS_STORAGE_BUCKET_NAME = env("AWS_STORAGE_BUCKET_NAME")
-    AWS_DEFAULT_ACL = "public-read"
-    AWS_S3_REGION = env("AWS_S3_REGION", default="us-east-2")
-    AWS_S3_CUSTOM_DOMAIN = f"s3.{AWS_S3_REGION}.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}"
-    AWS_S3_OBJECT_PARAMETERS = {"CacheControl": "max-age=86400"}
-    STATIC_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/static/"
-    MEDIA_URL = f"https://{AWS_S3_CUSTOM_DOMAIN}/media/"
-    STATICFILES_DIRS = [str(BASE_DIR.joinpath("public", "static"))]
-
-else:
-    # Local Storage
-    PUBLIC_ROOT = BASE_DIR.joinpath("public")
-    STATIC_ROOT = BASE_DIR.joinpath("collected_static")
-    MEDIA_ROOT = PUBLIC_ROOT.joinpath("media")
-    PUBLIC_STATIC = PUBLIC_ROOT.joinpath("static")
-    STATICFILES_DIRS = [str(PUBLIC_STATIC)]
-    MEDIA_URL = "/public/media/"
-    STATIC_URL = "/public/static/"
+PUBLIC_ROOT = BASE_DIR.joinpath("public")
+STATIC_ROOT = BASE_DIR.joinpath("collected_static")
+MEDIA_ROOT = PUBLIC_ROOT.joinpath("media")
+PUBLIC_STATIC = PUBLIC_ROOT.joinpath("static")
+STATICFILES_DIRS = [str(PUBLIC_STATIC)]
+MEDIA_URL = "/public/media/"
+STATIC_URL = "/public/static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

@@ -13,14 +13,6 @@ services:
     env_file:
       - .env
 
-  redis:
-    container_name: redis
-    image: redis:7.0
-    init: true
-    command: ["redis-server", "--appendonly", "yes"]
-    volumes:
-      - redis_data:/data
-
   web:
     container_name: web
     image: wsaf-management:python
@@ -41,7 +33,6 @@ services:
     depends_on:
       - node
       - db
-      - redis
 
     environment:
       USE_DOCKER: 'on'
@@ -70,5 +61,4 @@ services:
 
 volumes:
   postgres_data:
-  redis_data:
   node_modules:
