@@ -97,7 +97,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = env("WSGI_APPLICATION", default="config.wsgi.application")
-DB_SSL_REQUIRED = env.bool("DB_SSL_REQUIRED", default=not DEBUG)
+DB_SSL_REQUIRED = env.bool("DB_SSL_REQUIRED", default=False)
 
 # Database
 # See https://github.com/jacobian/dj-database-url for more examples
