@@ -11,7 +11,6 @@ class AllScheduleDSFeed(Feed):
     description = "All events in a lovely rss/json feed."
     link = "https://wsaf.org.uk"
 
-
     def items(self):
         return EventInstance.objects.filter(parent=None).order_by("start").all()
 

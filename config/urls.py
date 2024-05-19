@@ -18,7 +18,6 @@ urlpatterns += [
     path("404/", http_404),
     path("accounts/name/", NameChange.as_view(), name="account_change_name"),
     path("accounts/", include("allauth.urls")),
-
     path("ds/feed/", AllScheduleDSFeed()),
 ]
 
