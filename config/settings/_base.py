@@ -60,7 +60,7 @@ INSTALLED_APPS = [
     "storages",
     "schedule.apps.ScheduleConfig",
     "maintenance_mode",
-    "warwicksso",
+    "warwick_sso",
 ]
 
 MIDDLEWARE = [

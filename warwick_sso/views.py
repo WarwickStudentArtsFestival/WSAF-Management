@@ -13,14 +13,22 @@ API_BASE = "https://websignon.warwick.ac.uk"
 
 
 class WarwickSSOAPI(OAuth):
-    """Verifying Warwick SSO credentials."""
+    """
+    Verifying Warwick SSO attributes
+    """
 
     url = API_BASE + "/oauth/authenticate/attributes"
 
     def get_user_info(self):
-        json_user_info = json.loads(self.query(self.url))
-        print(json_user_info)
-        return json.loads(self.query(self.url))
+        query = self.query(self.url, method="POST")
+        content = query.strip()
+        data = {}
+        for item in content.split("\n"):
+            if "=" not in item:
+                continue
+            key, value = item.split('=', 1)
+            data[key] = value
+        return data
 
 
 class WarwickSSOOAuthAdapter(OAuthAdapter):
