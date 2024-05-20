@@ -34,6 +34,8 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["*"])
 INTERNAL_IPS = env.list("INTERNAL_IPS", default=["127.0.0.1"])
 CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=[])
 USE_X_FORWARDED_HOST = env.bool("USE_X_FORWARDED_HOST", default=False)
+if USE_X_FORWARDED_HOST is True:
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Get the IP to use for Django Debug Toolbar when developing with docker
 if env.bool("USE_DOCKER", default=False) is True:
