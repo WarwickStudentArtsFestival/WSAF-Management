@@ -5,12 +5,12 @@ from allauth.socialaccount.providers.oauth.provider import OAuthProvider
 class WarwickSSOAccount(ProviderAccount):
     def to_str(self):
         dflt = super().to_str()
-        name = self.account.extra_data.get("fullname", dflt)
+        name = self.account.extra_data.get("name", dflt)
         return name
 
 
 class WarwickSSOProvider(OAuthProvider):
-    id = "warwick-sso"
+    id = "warwick_sso"
     name = "Warwick SSO"
     account_class = WarwickSSOAccount
 
@@ -26,6 +26,7 @@ class WarwickSSOProvider(OAuthProvider):
             email=data.get("email"),
             first_name=data.get("firstname"),
             last_name=data.get("lastname"),
+            email_verified=True,
         )
 
 
