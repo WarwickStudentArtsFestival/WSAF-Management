@@ -81,9 +81,14 @@ class EventInstanceAdmin(admin.ModelAdmin):
 
     list_filter = ["venue", "event__categories", SatMonWeekDayListFilter, EventTypeListFilter, "published"]
 
-    list_display = ("event", "venue", "wsaf_time_start", "wsaf_time_end", "venue", "parent", "parent__data_collected")
+    list_display = ("event", "venue", "wsaf_time_start", "wsaf_time_end", "venue", "parent", "data_collected")
 
     ordering = ("start",)
+
+    def data_collected(self, obj):
+        return obj.event.data_collected
+    data_collected.admin_order_field = "data_collected"
+    data_collected.short_description = "Data Collected"
 
     def truncated_event_name(self, obj):
         return str(obj)[:80]
