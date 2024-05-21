@@ -60,7 +60,7 @@ class EventInstance(models.Model):
         json_dict = {
             "organiser": self.event.organisation.name if self.event.organisation is not None else None,
             "title": self.event.title,
-            "description": self.event.description,
+            "description": self.event.public_description,
             "categories": [category.name for category in self.event.categories.all()],
             "start": self.start,
             "end": self.end,
