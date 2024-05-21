@@ -23,6 +23,7 @@ class Event(models.Model):
     categories = models.ManyToManyField("Category", blank=True)
     tech_notes = models.TextField(null=True, blank=True)
     org_notes = models.TextField(null=True, blank=True)
+    data_collected = models.BooleanField(default=False)
 
     def __str__(self):
         """Return the key info about the event (name, title, organisation)."""
@@ -59,7 +60,7 @@ class EventInstance(models.Model):
         json_dict = {
             "organiser": self.event.organisation.name if self.event.organisation is not None else None,
             "title": self.event.title,
-            "description": self.event.description,
+            "description": self.event.public_description,
             "categories": [category.name for category in self.event.categories.all()],
             "start": self.start,
             "end": self.end,

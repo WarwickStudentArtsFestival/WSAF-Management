@@ -18,7 +18,8 @@ class ChildEventInstanceInline(admin.TabularInline):
 class EventAdmin(admin.ModelAdmin):
     inlines = [EventInstanceInline]
 
-    list_display = ("__str__", "preferred_occurrences", "assigned_instances")
+    list_display = ("__str__", "preferred_occurrences", "assigned_instances", "data_collected")
+    list_filter = ["data_collected"]
 
     def assigned_instances(self, obj):
         return obj.eventinstance_set.count()
@@ -80,7 +81,7 @@ class EventInstanceAdmin(admin.ModelAdmin):
 
     list_filter = ["venue", "event__categories", SatMonWeekDayListFilter, EventTypeListFilter, "published"]
 
-    list_display = ("event", "venue", "wsaf_time_start", "wsaf_time_end", "venue", "parent")
+    list_display = ("event", "venue", "wsaf_time_start", "wsaf_time_end", "venue", "parent", "parent__data_collected")
 
     ordering = ("start",)
 
