@@ -1,5 +1,3 @@
-import json
-
 from allauth.socialaccount.providers.oauth.client import OAuth
 from allauth.socialaccount.providers.oauth.views import (
     OAuthAdapter,
@@ -13,9 +11,7 @@ API_BASE = "https://websignon.warwick.ac.uk"
 
 
 class WarwickSSOAPI(OAuth):
-    """
-    Verifying Warwick SSO attributes
-    """
+    """Verifying Warwick SSO attributes."""
 
     url = API_BASE + "/oauth/authenticate/attributes"
 
@@ -26,7 +22,7 @@ class WarwickSSOAPI(OAuth):
         for item in content.split("\n"):
             if "=" not in item:
                 continue
-            key, value = item.split('=', 1)
+            key, value = item.split("=", 1)
             data[key] = value
         return data
 
@@ -38,9 +34,7 @@ class WarwickSSOOAuthAdapter(OAuthAdapter):
     authorize_url = API_BASE + "/oauth/authorise"
 
     def complete_login(self, request, app, token, response):
-        client = WarwickSSOAPI(
-            request, app.client_id, app.secret, self.request_token_url
-        )
+        client = WarwickSSOAPI(request, app.client_id, app.secret, self.request_token_url)
         extra_data = client.get_user_info()
         return self.get_provider().sociallogin_from_response(request, extra_data)
 
