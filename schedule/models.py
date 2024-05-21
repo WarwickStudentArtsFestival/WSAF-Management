@@ -23,6 +23,7 @@ class Event(models.Model):
     categories = models.ManyToManyField("Category", blank=True)
     tech_notes = models.TextField(null=True, blank=True)
     org_notes = models.TextField(null=True, blank=True)
+    data_collected = models.BooleanField(default=False)
 
     def __str__(self):
         """Return the key info about the event (name, title, organisation)."""
