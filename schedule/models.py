@@ -15,12 +15,14 @@ class Event(models.Model):
     organisation = models.ForeignKey("Organisation", on_delete=models.CASCADE, null=True, blank=True)
     submission_id = models.IntegerField(null=True, blank=True)
     title = models.CharField(max_length=200)
-    description = models.TextField(null=True, blank=True)
+    public_description = models.TextField(null=True, blank=True)
     estimated_duration = models.DurationField(null=True, blank=True)
     preferred_occurrences = models.IntegerField(default=1)
     admins = models.ManyToManyField("accounts.User", related_name="events_admin", blank=True)
     participants = models.ManyToManyField("accounts.User", related_name="events_participating", blank=True)
     categories = models.ManyToManyField("Category", blank=True)
+    tech_notes = models.TextField(null=True, blank=True)
+    org_notes = models.TextField(null=True, blank=True)
 
     def __str__(self):
         """Return the key info about the event (name, title, organisation)."""
@@ -35,11 +37,16 @@ class Event(models.Model):
 
 
 class EventInstance(models.Model):
+    class Meta:
+        verbose_name = "Schedule Item"
+        verbose_name_plural = "Schedule Items"
+
     event = models.ForeignKey(Event, on_delete=models.CASCADE)
     start = models.DateTimeField()
     end = models.DateTimeField()
     venue = models.ForeignKey("Venue", on_delete=models.CASCADE)
     parent = models.ForeignKey("self", on_delete=models.CASCADE, null=True, blank=True)
+    published = models.BooleanField(default=False)
 
     def __str__(self):
         """Return the key info about the event occurance (event, venue, start, end)."""

@@ -127,6 +127,12 @@ db_restore dump_file="":
     {{ python_cmd_prefix }} ruff format
     {{ python_cmd_prefix }} ruff check --fix
 
+# Format Python code (unsafe fixes)
+@format_py_unsafe:
+    just _start_msg "Formatting Python code using black"
+    {{ python_cmd_prefix }} ruff format
+    {{ python_cmd_prefix }} ruff check --fix --unsafe-fixes
+
 # Format SASS/CSS code
 @format_sass:
     just _start_msg "Formatting SASS code using stylelint"
