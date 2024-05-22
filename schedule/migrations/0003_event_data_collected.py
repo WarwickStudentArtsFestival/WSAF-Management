@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('schedule', '0002_alter_eventinstance_options_and_more'),
+        ("schedule", "0002_alter_eventinstance_options_and_more"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='event',
-            name='data_collected',
+            model_name="event",
+            name="data_collected",
             field=models.BooleanField(default=False),
         ),
     ]

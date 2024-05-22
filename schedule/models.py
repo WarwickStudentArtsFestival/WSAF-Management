@@ -77,7 +77,9 @@ class EventInstance(models.Model):
 
 class Venue(models.Model):
     name = models.CharField(max_length=200)
-    address = models.TextField()
+    slug = models.CharField(max_length=50, unique=True, null=True)
+    campus_map_url = models.CharField(blank=True, null=True)
+    description = models.TextField()
 
     def __str__(self):
         """Return the name of the venue."""
