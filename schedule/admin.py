@@ -87,6 +87,7 @@ class EventInstanceAdmin(admin.ModelAdmin):
 
     def data_collected(self, obj):
         return obj.event.data_collected
+
     data_collected.admin_order_field = "data_collected"
     data_collected.short_description = "Data Collected"
 
