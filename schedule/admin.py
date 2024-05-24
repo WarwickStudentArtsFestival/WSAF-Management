@@ -18,12 +18,17 @@ class ChildEventInstanceInline(admin.TabularInline):
 class EventAdmin(admin.ModelAdmin):
     inlines = [EventInstanceInline]
 
-    list_display = ("__str__", "preferred_occurrences", "assigned_instances", "data_collected")
+    list_display = ("__str__", "slug", "primary_category", "preferred_occurrences", "assigned_instances", "data_collected")
     list_filter = ["data_collected"]
 
     def assigned_instances(self, obj):
         return obj.eventinstance_set.count()
 
+class VenueAdmin(admin.ModelAdmin):
+    list_display = ("__str__", "slug")
+
+class OrganisationAdmin(admin.ModelAdmin):
+    list_display = ("__str__", "slug")
 
 class SatMonWeekDayListFilter(admin.SimpleListFilter):
     title = _("day")
@@ -110,8 +115,8 @@ class EventInstanceAdmin(admin.ModelAdmin):
     wsaf_time_end.short_description = "Event End"
 
 
-admin.site.register(Organisation)
-admin.site.register(Venue)
+admin.site.register(Organisation, OrganisationAdmin)
+admin.site.register(Venue, VenueAdmin)
 admin.site.register(Event, EventAdmin)
 admin.site.register(EventInstance, EventInstanceAdmin)
 admin.site.register(Category)
