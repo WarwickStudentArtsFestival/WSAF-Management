@@ -50,6 +50,7 @@ jobs:
     needs: [release]
 
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/production'
     environment:
       name: main
       url: https://wsaf-management-main.containers.uwcs.co.uk
