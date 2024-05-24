@@ -4,6 +4,8 @@ from django.utils import timezone
 
 class Organisation(models.Model):
     name = models.CharField(max_length=200)
+    slug = models.CharField(max_length=50, unique=True, null=True)
+
     description = models.TextField(blank=True, null=True)
 
     def __str__(self):
@@ -12,17 +14,26 @@ class Organisation(models.Model):
 
 
 class Event(models.Model):
-    organisation = models.ForeignKey("Organisation", on_delete=models.CASCADE, null=True, blank=True)
-    submission_id = models.IntegerField(null=True, blank=True)
     title = models.CharField(max_length=200)
+    slug = models.CharField(max_length=50, unique=True, null=True)
+    submission_id = models.IntegerField(null=True, blank=True)
+
+    organisation = models.ForeignKey("Organisation", on_delete=models.CASCADE, null=True, blank=True)
+
+    primary_category = models.ForeignKey("Category", on_delete=models.SET_NULL, null=True, related_name="primary_category")
+    categories = models.ManyToManyField("Category", blank=True)
     public_description = models.TextField(null=True, blank=True)
+    advertisement_weight = models.IntegerField(default=1)
+
     estimated_duration = models.DurationField(null=True, blank=True)
     preferred_occurrences = models.IntegerField(default=1)
+
     admins = models.ManyToManyField("accounts.User", related_name="events_admin", blank=True)
     participants = models.ManyToManyField("accounts.User", related_name="events_participating", blank=True)
-    categories = models.ManyToManyField("Category", blank=True)
+
     tech_notes = models.TextField(null=True, blank=True)
     org_notes = models.TextField(null=True, blank=True)
+
     data_collected = models.BooleanField(default=False)
 
     def __str__(self):
@@ -61,7 +72,7 @@ class EventInstance(models.Model):
             "organiser": self.event.organisation.name if self.event.organisation is not None else None,
             "title": self.event.title,
             "description": self.event.public_description,
-            "categories": [category.name for category in self.event.categories.all()],
+            "categories": [category.name for category in self.event.additional_categories.all()],
             "start": self.start,
             "end": self.end,
             "venue": self.venue.name,
@@ -87,7 +98,22 @@ class Venue(models.Model):
 
 
 class Category(models.Model):
+    class CategoryIcon(models.TextChoices):
+        MASK = "MASK"
+        TRUMPET = "TRUMPET"
+        BALLET_SHOES = "BALLET_SHOES"
+        MICROPHONE = "MICROPHONE"
+        PAINTBRUSH = "PAINTBRUSH"
+
+    class CategoryColourThemes(models.TextChoices):
+        YELLOW = "YELLOW"
+        ORANGE = "ORANGE"
+        PINK = "PINK"
+        PURPLE = "PURPLE"
+
     name = models.CharField(max_length=50)
+    icon = models.CharField(max_length=32, choices=CategoryIcon.choices, default=CategoryIcon.MASK)
+    colour_theme = models.CharField(max_length=32, choices=CategoryColourThemes.choices, default=CategoryColourThemes.PURPLE)
 
     # define plural for django admin
     class Meta:
