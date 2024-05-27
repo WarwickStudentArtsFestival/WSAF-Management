@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-
+from django.utils.html import mark_safe
 
 class Organisation(models.Model):
     name = models.CharField(max_length=200)
@@ -94,10 +94,14 @@ class Venue(models.Model):
     slug = models.CharField(max_length=50, unique=True, null=True)
     campus_map_url = models.CharField(blank=True, null=True)
     description = models.TextField()
+    image = models.ImageField(upload_to='images/venues/', blank=True, null=True)
 
     def __str__(self):
         """Return the name of the venue."""
         return self.name
+
+    def image_preview(self):
+        return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.image.url))
 
 
 class Category(models.Model):

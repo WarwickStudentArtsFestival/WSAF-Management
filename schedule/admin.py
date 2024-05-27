@@ -31,7 +31,8 @@ class EventAdmin(admin.ModelAdmin):
         return obj.eventinstance_set.filter(published=False).count() == 0
 
 class VenueAdmin(admin.ModelAdmin):
-    list_display = ("__str__", "slug")
+    list_display = ("__str__", "slug", "image_preview")
+    readonly_fields = ['image_preview']
 
 class OrganisationAdmin(admin.ModelAdmin):
     list_display = ("__str__", "slug")
