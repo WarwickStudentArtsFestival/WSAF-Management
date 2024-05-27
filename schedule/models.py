@@ -34,6 +34,9 @@ class Event(models.Model):
     tech_notes = models.TextField(null=True, blank=True)
     org_notes = models.TextField(null=True, blank=True)
 
+    published = models.BooleanField(default=False)
+    digital_signage = models.BooleanField(default=False)
+
     data_collected = models.BooleanField(default=False)
 
     def __str__(self):
