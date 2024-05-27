@@ -18,11 +18,17 @@ class ChildEventInstanceInline(admin.TabularInline):
 class EventAdmin(admin.ModelAdmin):
     inlines = [EventInstanceInline]
 
-    list_display = ("__str__", "slug", "primary_category", "preferred_occurrences", "assigned_instances", "data_collected")
-    list_filter = ["data_collected"]
+    list_display = ("__str__", "slug", "primary_category", "preferred_occurrences", "assigned_instances", "data_collected", "published", "instances_published", "digital_signage")
+    list_filter = ["data_collected", "published", "digital_signage"]
 
     def assigned_instances(self, obj):
         return obj.eventinstance_set.count()
+
+    @admin.display(boolean=True)
+    def instances_published(self, obj):
+        if obj.eventinstance_set.count() == 0:
+            return None
+        return obj.eventinstance_set.filter(published=False).count() == 0
 
 class VenueAdmin(admin.ModelAdmin):
     list_display = ("__str__", "slug")
