@@ -8,9 +8,14 @@ class Organisation(models.Model):
 
     description = models.TextField(blank=True, null=True)
 
+    logo = models.ImageField(upload_to='images/organisation-logos/', blank=True, null=True)
+
     def __str__(self):
         """Return the name of the organisation."""
         return self.name
+
+    def logo_preview(self):
+        return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.logo.url)) if self.logo else None
 
 
 class Event(models.Model):
@@ -24,6 +29,7 @@ class Event(models.Model):
     categories = models.ManyToManyField("Category", blank=True)
     public_description = models.TextField(null=True, blank=True)
     advertisement_weight = models.IntegerField(default=1)
+    logo = models.ImageField(upload_to='images/event-logos/', blank=True, null=True, help_text="Event logo (overrides category logo)")
 
     estimated_duration = models.DurationField(null=True, blank=True)
     preferred_occurrences = models.IntegerField(default=1)
@@ -49,6 +55,12 @@ class Event(models.Model):
             name_string += f" ({self.organisation})"
 
         return name_string
+
+    def image_preview(self):
+        return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.image().url)) if self.image() else None
+
+    def image(self):
+        return self.logo if self.logo else (self.primary_category.image if self.primary_category else None)
 
 
 class EventInstance(models.Model):
@@ -101,7 +113,7 @@ class Venue(models.Model):
         return self.name
 
     def image_preview(self):
-        return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.image.url))
+        return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.image.url)) if self.image else None
 
 
 class Category(models.Model):
@@ -119,7 +131,7 @@ class Category(models.Model):
         PURPLE = "PURPLE"
 
     name = models.CharField(max_length=50)
-    icon = models.CharField(max_length=32, choices=CategoryIcon.choices, default=CategoryIcon.MASK)
+    image = models.ImageField(upload_to='images/category-icons/', blank=True, null=True)
     colour_theme = models.CharField(max_length=32, choices=CategoryColourThemes.choices, default=CategoryColourThemes.PURPLE)
 
     # define plural for django admin
@@ -129,3 +141,6 @@ class Category(models.Model):
     def __str__(self):
         """Return the name of the category."""
         return self.name
+
+    def image_preview(self):
+        return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.image.url)) if self.image else None
