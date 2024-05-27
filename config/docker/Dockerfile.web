@@ -91,7 +91,9 @@ COPY --chown=app:app . .
 
 RUN SECRET_KEY=e python manage.py collectstatic --no-input
 
+RUN mkdir -p /srv/app/public/media
 RUN chmod 777 /srv/app/public/media
+VOLUME /srv/app/public/media
 
 USER app
 
