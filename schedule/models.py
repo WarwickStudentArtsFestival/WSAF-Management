@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.utils.html import mark_safe
+import base64
 
 class Organisation(models.Model):
     name = models.CharField(max_length=200)
@@ -62,6 +63,16 @@ class Event(models.Model):
     def image(self):
         return self.logo if self.logo else (self.primary_category.image if self.primary_category else None)
 
+    def image_base64(self):
+        if self.image() is None:
+            return None
+
+        image_file = open(self.image().path, "rb")
+        data = base64.b64encode(image_file.read())
+        image_file.close()
+
+        return data.decode('ascii')
+
 
 class EventInstance(models.Model):
     class Meta:
@@ -87,10 +98,11 @@ class EventInstance(models.Model):
             "organiser": self.event.organisation.name if self.event.organisation is not None else None,
             "title": self.event.title,
             "description": self.event.public_description,
-            "categories": [category.name for category in self.event.additional_categories.all()],
+            "categories": [category.name for category in self.event.categories.all()],
             "start": self.start,
             "end": self.end,
             "venue": self.venue.name,
+            "image": self.event.image_base64(),
         }
 
         children = EventInstance.objects.filter(parent=self).all()
