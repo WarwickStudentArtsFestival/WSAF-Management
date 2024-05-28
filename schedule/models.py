@@ -35,6 +35,7 @@ class Event(models.Model):
 
     primary_category = models.ForeignKey("Category", on_delete=models.SET_NULL, null=True, related_name="primary_category")
     categories = models.ManyToManyField("Category", blank=True)
+    tiny_description = models.CharField(max_length=50, null=True, blank=True, help_text="Used in website events introduction")
     short_description = models.TextField(null=True, blank=True)
     long_description = models.TextField(null=True, blank=True)
     advertisement_weight = models.IntegerField(default=1)
