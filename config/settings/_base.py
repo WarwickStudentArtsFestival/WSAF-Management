@@ -173,7 +173,8 @@ STATIC_ROOT = BASE_DIR.joinpath("collected_static")
 MEDIA_ROOT = PUBLIC_ROOT.joinpath("media")
 PUBLIC_STATIC = PUBLIC_ROOT.joinpath("static")
 STATICFILES_DIRS = [str(PUBLIC_STATIC)]
-MEDIA_URL = "/public/media/"
+#MEDIA_URL = "/public/media/"
+MEDIA_URL = env("WSAF_ASSETS_BASE_URL") + "/"
 STATIC_URL = "/public/static/"
 
 # Default primary key field type
