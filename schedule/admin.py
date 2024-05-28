@@ -128,7 +128,7 @@ class EventInstanceAdmin(admin.ModelAdmin):
     wsaf_time_end.short_description = "Event End"
 
 class CategoryAdmin(admin.ModelAdmin):
-    list_display = ("__str__", "colour_theme", "image_preview")
+    list_display = ("__str__", "colour_theme", "image_preview", "icon")
     readonly_fields = ["image_preview"]
 
 admin.site.register(Organisation, OrganisationAdmin)

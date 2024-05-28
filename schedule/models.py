@@ -74,12 +74,14 @@ class Event(models.Model):
         if self.logo or (self.organisation and self.organisation.logo):
             if self.image():
                 image = Image.open(self.image().path)
-                image.thumbnail((64, 64))
+                image.thumbnail((128, 128))
                 data = BytesIO()
                 image.save(data, "PNG", optimize=True)
                 image.close()
 
                 return base64.b64encode(data.getvalue()).decode('ascii')
+        elif self.primary_category:
+            return self.primary_category.icon
         return None
 
 
@@ -153,6 +155,7 @@ class Category(models.Model):
 
     name = models.CharField(max_length=50)
     image = models.ImageField(upload_to='images/category-icons/', blank=True, null=True)
+    icon = models.CharField(max_length=32, choices=CategoryIcon.choices, default=CategoryIcon.MASK, help_text="For digital signage")
     colour_theme = models.CharField(max_length=32, choices=CategoryColourThemes.choices, default=CategoryColourThemes.PURPLE)
 
     # define plural for django admin
