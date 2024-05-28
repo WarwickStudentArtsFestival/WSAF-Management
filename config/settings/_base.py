@@ -70,6 +70,8 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
     "django_alive.middleware.healthcheck_bypass_host_check",
     "django.middleware.security.SecurityMiddleware",
+    # Whitenoise
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -161,7 +163,8 @@ STORAGES = {
         "BACKEND": env("DEFAULT_FILE_STORAGE", default="django.core.files.storage.FileSystemStorage"),
     },
     "staticfiles": {
-        "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        #"BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
     },
 }
 
