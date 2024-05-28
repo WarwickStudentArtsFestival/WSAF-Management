@@ -2,6 +2,8 @@ from django.db import models
 from django.utils import timezone
 from django.utils.html import mark_safe
 import base64
+from PIL import Image
+from io import BytesIO
 
 class Organisation(models.Model):
     name = models.CharField(max_length=200)
@@ -69,12 +71,15 @@ class Event(models.Model):
             return self.primary_category.image
 
     def image_base64(self):
-        if self.image():
-            image_file = open(self.image().path, "rb")
-            data = base64.b64encode(image_file.read())
-            image_file.close()
+        if self.logo or (self.organisation and self.organisation.logo):
+            if self.image():
+                image = Image.open(self.image().path)
+                image.thumbnail((64, 64))
+                data = BytesIO()
+                image.save(data, "PNG", optimize=True)
+                image.close()
 
-            return data.decode('ascii')
+                return base64.b64encode(data.getvalue()).decode('ascii')
         return None
 
 
