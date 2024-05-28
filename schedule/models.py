@@ -30,7 +30,7 @@ class Event(models.Model):
     categories = models.ManyToManyField("Category", blank=True)
     public_description = models.TextField(null=True, blank=True)
     advertisement_weight = models.IntegerField(default=1)
-    logo = models.ImageField(upload_to='images/event-logos/', blank=True, null=True, help_text="Event logo (overrides category logo)")
+    logo = models.ImageField(upload_to='images/event-logos/', blank=True, null=True, help_text="Event logo (overrides category and organisation logo)")
 
     estimated_duration = models.DurationField(null=True, blank=True)
     preferred_occurrences = models.IntegerField(default=1)
@@ -61,17 +61,21 @@ class Event(models.Model):
         return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.image().url)) if self.image() else None
 
     def image(self):
-        return self.logo if self.logo else (self.primary_category.image if self.primary_category else None)
+        if self.logo:
+            return self.logo
+        if self.organisation and self.organisation.logo:
+            return self.organisation.logo
+        if self.primary_category:
+            return self.primary_category.image
 
     def image_base64(self):
-        if self.image() is None:
-            return None
+        if self.image():
+            image_file = open(self.image().path, "rb")
+            data = base64.b64encode(image_file.read())
+            image_file.close()
 
-        image_file = open(self.image().path, "rb")
-        data = base64.b64encode(image_file.read())
-        image_file.close()
-
-        return data.decode('ascii')
+            return data.decode('ascii')
+        return None
 
 
 class EventInstance(models.Model):
