@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
+from django.utils.html import format_html
 
 from .models import Category, Event, EventInstance, Organisation, Venue
 
@@ -18,8 +19,9 @@ class ChildEventInstanceInline(admin.TabularInline):
 class EventAdmin(admin.ModelAdmin):
     inlines = [EventInstanceInline]
 
-    list_display = ("__str__", "slug", "primary_category", "preferred_occurrences", "assigned_instances", "data_collected", "published", "instances_published", "digital_signage")
+    list_display = ("__str__", "slug", "primary_category", "preferred_occurrences", "assigned_instances", "data_collected", "published", "instances_published", "digital_signage", "image_small_preview")
     list_filter = ["data_collected", "published", "digital_signage"]
+    readonly_fields = ["image_preview"]
 
     def assigned_instances(self, obj):
         return obj.eventinstance_set.count()
@@ -30,11 +32,16 @@ class EventAdmin(admin.ModelAdmin):
             return None
         return obj.eventinstance_set.filter(published=False).count() == 0
 
+    def image_small_preview(self, obj):
+        return format_html('<img src="{}" style="max-width:20px; max-height:20px"/>'.format(obj.image().url)) if obj.image() else None
+
 class VenueAdmin(admin.ModelAdmin):
-    list_display = ("__str__", "slug")
+    list_display = ("__str__", "slug", "image_preview")
+    readonly_fields = ["image_preview"]
 
 class OrganisationAdmin(admin.ModelAdmin):
-    list_display = ("__str__", "slug")
+    list_display = ("__str__", "slug", "logo_preview")
+    readonly_fields = ["logo_preview"]
 
 class SatMonWeekDayListFilter(admin.SimpleListFilter):
     title = _("day")
@@ -120,9 +127,12 @@ class EventInstanceAdmin(admin.ModelAdmin):
     wsaf_time_end.admin_order_field = "end"
     wsaf_time_end.short_description = "Event End"
 
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ("__str__", "image_preview")
+    readonly_fields = ["image_preview"]
 
 admin.site.register(Organisation, OrganisationAdmin)
 admin.site.register(Venue, VenueAdmin)
 admin.site.register(Event, EventAdmin)
 admin.site.register(EventInstance, EventInstanceAdmin)
-admin.site.register(Category)
+admin.site.register(Category, CategoryAdmin)

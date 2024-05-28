@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
-
+from django.utils.html import mark_safe
+import base64
 
 class Organisation(models.Model):
     name = models.CharField(max_length=200)
@@ -8,9 +9,14 @@ class Organisation(models.Model):
 
     description = models.TextField(blank=True, null=True)
 
+    logo = models.ImageField(upload_to='images/organisation-logos/', blank=True, null=True)
+
     def __str__(self):
         """Return the name of the organisation."""
         return self.name
+
+    def logo_preview(self):
+        return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.logo.url)) if self.logo else None
 
 
 class Event(models.Model):
@@ -24,6 +30,7 @@ class Event(models.Model):
     categories = models.ManyToManyField("Category", blank=True)
     public_description = models.TextField(null=True, blank=True)
     advertisement_weight = models.IntegerField(default=1)
+    logo = models.ImageField(upload_to='images/event-logos/', blank=True, null=True, help_text="Event logo (overrides category logo)")
 
     estimated_duration = models.DurationField(null=True, blank=True)
     preferred_occurrences = models.IntegerField(default=1)
@@ -50,6 +57,22 @@ class Event(models.Model):
 
         return name_string
 
+    def image_preview(self):
+        return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.image().url)) if self.image() else None
+
+    def image(self):
+        return self.logo if self.logo else (self.primary_category.image if self.primary_category else None)
+
+    def image_base64(self):
+        if self.image() is None:
+            return None
+
+        image_file = open(self.image().path, "rb")
+        data = base64.b64encode(image_file.read())
+        image_file.close()
+
+        return data.decode('ascii')
+
 
 class EventInstance(models.Model):
     class Meta:
@@ -75,10 +98,11 @@ class EventInstance(models.Model):
             "organiser": self.event.organisation.name if self.event.organisation is not None else None,
             "title": self.event.title,
             "description": self.event.public_description,
-            "categories": [category.name for category in self.event.additional_categories.all()],
+            "categories": [category.name for category in self.event.categories.all()],
             "start": self.start,
             "end": self.end,
             "venue": self.venue.name,
+            "image": self.event.image_base64(),
         }
 
         children = EventInstance.objects.filter(parent=self).all()
@@ -94,10 +118,14 @@ class Venue(models.Model):
     slug = models.CharField(max_length=50, unique=True, null=True)
     campus_map_url = models.CharField(blank=True, null=True)
     description = models.TextField()
+    image = models.ImageField(upload_to='images/venues/', blank=True, null=True)
 
     def __str__(self):
         """Return the name of the venue."""
         return self.name
+
+    def image_preview(self):
+        return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.image.url)) if self.image else None
 
 
 class Category(models.Model):
@@ -115,7 +143,7 @@ class Category(models.Model):
         PURPLE = "PURPLE"
 
     name = models.CharField(max_length=50)
-    icon = models.CharField(max_length=32, choices=CategoryIcon.choices, default=CategoryIcon.MASK)
+    image = models.ImageField(upload_to='images/category-icons/', blank=True, null=True)
     colour_theme = models.CharField(max_length=32, choices=CategoryColourThemes.choices, default=CategoryColourThemes.PURPLE)
 
     # define plural for django admin
@@ -125,3 +153,6 @@ class Category(models.Model):
     def __str__(self):
         """Return the name of the category."""
         return self.name
+
+    def image_preview(self):
+        return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.image.url)) if self.image else None

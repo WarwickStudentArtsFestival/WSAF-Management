@@ -8,11 +8,11 @@ from .models import EventInstance
 
 class AllScheduleDSFeed(Feed):
     title = "WSAF Schedule for Digital Signage"
-    description = "All events in a lovely rss/json feed."
+    description = "All published Warwick Student Arts Festival events in a RSS/JSON feed."
     link = "https://wsaf.org.uk"
 
     def items(self):
-        return EventInstance.objects.filter(parent=None).order_by("start").all()
+        return EventInstance.objects.filter(parent=None, event__digital_signage=True).order_by("start").all()
 
     def item_title(self, item: EventInstance):
         return str(item.event.title)

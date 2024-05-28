@@ -2,6 +2,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import URLPattern, URLResolver, include, path
 from django.views.generic import TemplateView
+from django.conf.urls.static import static
 
 from accounts.views import NameChange
 from base.views import http_404, http_500
@@ -20,6 +21,8 @@ urlpatterns += [
     path("accounts/", include("allauth.urls")),
     path("ds/feed/", AllScheduleDSFeed()),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # Debug/Development URLs
 if settings.DEBUG is True:
