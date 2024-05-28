@@ -10,8 +10,13 @@ class Organisation(models.Model):
     slug = models.CharField(max_length=50, unique=True, null=True)
 
     description = models.TextField(blank=True, null=True)
+    website_name = models.CharField(max_length=100, null=True, blank=True, help_text="Will override website URL label")
+    website_url = models.CharField(max_length=200, null=True, blank=True)
+    instagram_handle = models.CharField(max_length=200, null=True, blank=True)
 
     logo = models.ImageField(upload_to='images/organisation-logos/', blank=True, null=True)
+
+    is_society = models.BooleanField(default=False)
 
     def __str__(self):
         """Return the name of the organisation."""
@@ -30,7 +35,8 @@ class Event(models.Model):
 
     primary_category = models.ForeignKey("Category", on_delete=models.SET_NULL, null=True, related_name="primary_category")
     categories = models.ManyToManyField("Category", blank=True)
-    public_description = models.TextField(null=True, blank=True)
+    short_description = models.TextField(null=True, blank=True)
+    long_description = models.TextField(null=True, blank=True)
     advertisement_weight = models.IntegerField(default=1)
     logo = models.ImageField(upload_to='images/event-logos/', blank=True, null=True, help_text="Event logo (overrides category and organisation logo)")
 

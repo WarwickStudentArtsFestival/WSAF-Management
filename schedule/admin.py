@@ -39,8 +39,10 @@ class VenueAdmin(admin.ModelAdmin):
     list_display = ("__str__", "slug", "image_preview")
     readonly_fields = ["image_preview"]
 
+    inlines = [EventInstanceInline]
+
 class OrganisationAdmin(admin.ModelAdmin):
-    list_display = ("__str__", "slug", "logo_preview")
+    list_display = ("__str__", "slug", "logo_preview", "is_society", "instagram_handle")
     readonly_fields = ["logo_preview"]
 
 class SatMonWeekDayListFilter(admin.SimpleListFilter):
