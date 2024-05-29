@@ -115,12 +115,13 @@ class EventInstance(models.Model):
         json_dict = {
             "organiser": self.event.organisation.name if self.event.organisation is not None else None,
             "title": self.event.title,
-            "description": self.event.public_description,
+            "description": self.event.short_description,
             "categories": [category.name for category in self.event.categories.all()],
             "start": self.start,
             "end": self.end,
             "venue": self.venue.name,
             "image": self.event.image_base64(),
+            "colour": self.event.primary_category.colour_theme if self.event.primary_category else 'PURPLE'
         }
 
         children = EventInstance.objects.filter(parent=self).all()
