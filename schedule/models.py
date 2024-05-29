@@ -121,6 +121,7 @@ class EventInstance(models.Model):
             "end": self.end,
             "venue": self.venue.name,
             "image": self.event.image_base64(),
+            "colour": self.event.primary_category.colour_theme if self.event.primary_category else 'PURPLE'
         }
 
         children = EventInstance.objects.filter(parent=self).all()
