@@ -2,6 +2,7 @@ import json
 
 from django.contrib.syndication.views import Feed
 from django.core.serializers.json import DjangoJSONEncoder
+from django.utils import timezone
 
 from .models import EventInstance
 
@@ -12,7 +13,7 @@ class AllScheduleDSFeed(Feed):
     link = "https://wsaf.org.uk"
 
     def items(self):
-        return EventInstance.objects.filter(parent=None, event__digital_signage=True).order_by("start").all()
+        return EventInstance.objects.filter(parent=None, event__digital_signage=True, start__gt=timezone.now()).order_by("start").all()
 
     def item_title(self, item: EventInstance):
         return str(item.event.title)
