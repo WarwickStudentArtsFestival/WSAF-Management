@@ -103,6 +103,7 @@ class EventInstance(models.Model):
     venue = models.ForeignKey("Venue", on_delete=models.CASCADE)
     parent = models.ForeignKey("self", on_delete=models.CASCADE, null=True, blank=True)
     published = models.BooleanField(default=False)
+    booking_url = models.CharField(max_length=200, blank=True, null=True)
 
     def __str__(self):
         """Return the key info about the event occurance (event, venue, start, end)."""
