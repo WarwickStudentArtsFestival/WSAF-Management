@@ -101,7 +101,7 @@ class EventInstanceAdmin(admin.ModelAdmin):
 
     list_filter = ["venue", "event__categories", SatMonWeekDayListFilter, EventTypeListFilter, "published"]
 
-    list_display = ("event", "venue", "wsaf_time_start", "wsaf_time_end", "venue", "parent", "data_collected")
+    list_display = ("event", "venue", "wsaf_time_start", "wsaf_time_end", "venue", "parent", "data_collected", "booking_url")
 
     ordering = ("start",)
 
