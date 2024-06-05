@@ -1,9 +1,12 @@
+import base64
+from io import BytesIO
+
 from django.db import models
 from django.utils import timezone
 from django.utils.html import mark_safe
-import base64
+
 from PIL import Image
-from io import BytesIO
+
 
 class Organisation(models.Model):
     name = models.CharField(max_length=200)
@@ -14,7 +17,7 @@ class Organisation(models.Model):
     website_url = models.CharField(max_length=200, null=True, blank=True)
     instagram_handle = models.CharField(max_length=200, null=True, blank=True)
 
-    logo = models.ImageField(upload_to='images/organisation-logos/', blank=True, null=True)
+    logo = models.ImageField(upload_to="images/organisation-logos/", blank=True, null=True)
 
     is_society = models.BooleanField(default=False)
 
@@ -23,7 +26,11 @@ class Organisation(models.Model):
         return self.name
 
     def logo_preview(self):
-        return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.logo.url)) if self.logo else None
+        return (
+            mark_safe(f'<img src="{self.logo.url}" style="max-width:50px; max-height:50px"/>')
+            if self.logo
+            else None
+        )
 
 
 class Event(models.Model):
@@ -33,13 +40,22 @@ class Event(models.Model):
 
     organisation = models.ForeignKey("Organisation", on_delete=models.CASCADE, null=True, blank=True)
 
-    primary_category = models.ForeignKey("Category", on_delete=models.SET_NULL, null=True, related_name="primary_category")
+    primary_category = models.ForeignKey(
+        "Category", on_delete=models.SET_NULL, null=True, related_name="primary_category"
+    )
     categories = models.ManyToManyField("Category", blank=True)
-    tiny_description = models.CharField(max_length=50, null=True, blank=True, help_text="Used in website events introduction")
+    tiny_description = models.CharField(
+        max_length=50, null=True, blank=True, help_text="Used in website events introduction"
+    )
     short_description = models.TextField(null=True, blank=True)
     long_description = models.TextField(null=True, blank=True)
     advertisement_weight = models.IntegerField(default=1)
-    logo = models.ImageField(upload_to='images/event-logos/', blank=True, null=True, help_text="Event logo (overrides category and organisation logo)")
+    logo = models.ImageField(
+        upload_to="images/event-logos/",
+        blank=True,
+        null=True,
+        help_text="Event logo (overrides category and organisation logo)",
+    )
 
     estimated_duration = models.DurationField(null=True, blank=True)
     preferred_occurrences = models.IntegerField(default=1)
@@ -67,7 +83,11 @@ class Event(models.Model):
         return name_string
 
     def image_preview(self):
-        return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.image().url)) if self.image() else None
+        return (
+            mark_safe(f'<img src="{self.image().url}" style="max-width:50px; max-height:50px"/>')
+            if self.image()
+            else None
+        )
 
     def image(self):
         if self.logo:
@@ -86,7 +106,7 @@ class Event(models.Model):
                 image.save(data, "PNG", optimize=True)
                 image.close()
 
-                return base64.b64encode(data.getvalue()).decode('ascii')
+                return base64.b64encode(data.getvalue()).decode("ascii")
         elif self.primary_category:
             return self.primary_category.icon
         return None
@@ -122,7 +142,7 @@ class EventInstance(models.Model):
             "end": self.end,
             "venue": self.venue.name,
             "image": self.event.image_base64(),
-            "colour": self.event.primary_category.colour_theme if self.event.primary_category else 'PURPLE'
+            "colour": self.event.primary_category.colour_theme if self.event.primary_category else "PURPLE",
         }
 
         children = EventInstance.objects.filter(parent=self).all()
@@ -132,20 +152,28 @@ class EventInstance(models.Model):
 
         return json_dict
 
+    def is_visible(self):
+        """Return whether the event instance is published."""
+        return self.published and self.event.published
+
 
 class Venue(models.Model):
     name = models.CharField(max_length=200)
     slug = models.CharField(max_length=50, unique=True, null=True)
     campus_map_url = models.CharField(blank=True, null=True)
     description = models.TextField()
-    image = models.ImageField(upload_to='images/venues/', blank=True, null=True)
+    image = models.ImageField(upload_to="images/venues/", blank=True, null=True)
 
     def __str__(self):
         """Return the name of the venue."""
         return self.name
 
     def image_preview(self):
-        return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.image.url)) if self.image else None
+        return (
+            mark_safe(f'<img src="{self.image.url}" style="max-width:50px; max-height:50px"/>')
+            if self.image
+            else None
+        )
 
 
 class Category(models.Model):
@@ -163,9 +191,13 @@ class Category(models.Model):
         PURPLE = "PURPLE"
 
     name = models.CharField(max_length=50)
-    image = models.ImageField(upload_to='images/category-icons/', blank=True, null=True)
-    icon = models.CharField(max_length=32, choices=CategoryIcon.choices, default=CategoryIcon.MASK, help_text="For digital signage")
-    colour_theme = models.CharField(max_length=32, choices=CategoryColourThemes.choices, default=CategoryColourThemes.PURPLE)
+    image = models.ImageField(upload_to="images/category-icons/", blank=True, null=True)
+    icon = models.CharField(
+        max_length=32, choices=CategoryIcon.choices, default=CategoryIcon.MASK, help_text="For digital signage"
+    )
+    colour_theme = models.CharField(
+        max_length=32, choices=CategoryColourThemes.choices, default=CategoryColourThemes.PURPLE
+    )
 
     # define plural for django admin
     class Meta:
@@ -176,4 +208,8 @@ class Category(models.Model):
         return self.name
 
     def image_preview(self):
-        return mark_safe('<img src="{}" style="max-width:50px; max-height:50px"/>'.format(self.image.url)) if self.image else None
+        return (
+            mark_safe(f'<img src="{self.image.url}" style="max-width:50px; max-height:50px"/>')
+            if self.image
+            else None
+        )

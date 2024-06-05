@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('schedule', '0014_event_tiny_description'),
+        ("schedule", "0014_event_tiny_description"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='eventinstance',
-            name='booking_url',
+            model_name="eventinstance",
+            name="booking_url",
             field=models.CharField(blank=True, max_length=200, null=True),
         ),
     ]

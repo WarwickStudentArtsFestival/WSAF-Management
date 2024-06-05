@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils import timezone
-from django.utils.translation import gettext_lazy as _
 from django.utils.html import format_html
+from django.utils.translation import gettext_lazy as _
 
 from .models import Category, Event, EventInstance, Organisation, Venue
 
@@ -19,7 +19,18 @@ class ChildEventInstanceInline(admin.TabularInline):
 class EventAdmin(admin.ModelAdmin):
     inlines = [EventInstanceInline]
 
-    list_display = ("__str__", "slug", "primary_category", "preferred_occurrences", "assigned_instances", "data_collected", "published", "instances_published", "digital_signage", "image_small_preview")
+    list_display = (
+        "__str__",
+        "slug",
+        "primary_category",
+        "preferred_occurrences",
+        "assigned_instances",
+        "data_collected",
+        "published",
+        "instances_published",
+        "digital_signage",
+        "image_small_preview",
+    )
     list_filter = ["data_collected", "published", "digital_signage"]
     readonly_fields = ["image_preview"]
 
@@ -33,7 +44,12 @@ class EventAdmin(admin.ModelAdmin):
         return obj.eventinstance_set.filter(published=False).count() == 0
 
     def image_small_preview(self, obj):
-        return format_html('<img src="{}" style="max-width:20px; max-height:20px"/>'.format(obj.image().url)) if obj.image() else None
+        return (
+            format_html(f'<img src="{obj.image().url}" style="max-width:20px; max-height:20px"/>')
+            if obj.image()
+            else None
+        )
+
 
 class VenueAdmin(admin.ModelAdmin):
     list_display = ("__str__", "slug", "image_preview")
@@ -41,9 +57,11 @@ class VenueAdmin(admin.ModelAdmin):
 
     inlines = [EventInstanceInline]
 
+
 class OrganisationAdmin(admin.ModelAdmin):
     list_display = ("__str__", "slug", "logo_preview", "is_society", "instagram_handle")
     readonly_fields = ["logo_preview"]
+
 
 class SatMonWeekDayListFilter(admin.SimpleListFilter):
     title = _("day")
@@ -99,9 +117,19 @@ class EventTypeListFilter(admin.SimpleListFilter):
 class EventInstanceAdmin(admin.ModelAdmin):
     inlines = [ChildEventInstanceInline]
 
-    list_filter = ["venue", "event__categories", SatMonWeekDayListFilter, EventTypeListFilter, "published"]
+    list_filter = ["venue", "event__categories", SatMonWeekDayListFilter, EventTypeListFilter]
 
-    list_display = ("event", "venue", "wsaf_time_start", "wsaf_time_end", "venue", "parent", "data_collected", "booking_url")
+    list_display = (
+        "event",
+        "venue",
+        "wsaf_time_start",
+        "wsaf_time_end",
+        "venue",
+        "parent",
+        "data_collected",
+        "booking_url",
+        "is_visible"
+    )
 
     ordering = ("start",)
 
@@ -129,9 +157,11 @@ class EventInstanceAdmin(admin.ModelAdmin):
     wsaf_time_end.admin_order_field = "end"
     wsaf_time_end.short_description = "Event End"
 
+
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ("__str__", "colour_theme", "image_preview", "icon")
     readonly_fields = ["image_preview"]
+
 
 admin.site.register(Organisation, OrganisationAdmin)
 admin.site.register(Venue, VenueAdmin)

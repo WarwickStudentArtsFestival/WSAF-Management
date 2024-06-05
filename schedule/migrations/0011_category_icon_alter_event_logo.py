@@ -4,20 +4,35 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('schedule', '0010_alter_event_logo'),
+        ("schedule", "0010_alter_event_logo"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='category',
-            name='icon',
-            field=models.CharField(choices=[('MASK', 'Mask'), ('TRUMPET', 'Trumpet'), ('BALLET_SHOES', 'Ballet Shoes'), ('MICROPHONE', 'Microphone'), ('PAINTBRUSH', 'Paintbrush')], default='MASK', help_text='For digital signage', max_length=32),
+            model_name="category",
+            name="icon",
+            field=models.CharField(
+                choices=[
+                    ("MASK", "Mask"),
+                    ("TRUMPET", "Trumpet"),
+                    ("BALLET_SHOES", "Ballet Shoes"),
+                    ("MICROPHONE", "Microphone"),
+                    ("PAINTBRUSH", "Paintbrush"),
+                ],
+                default="MASK",
+                help_text="For digital signage",
+                max_length=32,
+            ),
         ),
         migrations.AlterField(
-            model_name='event',
-            name='logo',
-            field=models.ImageField(blank=True, help_text='Event logo (overrides category and organisation logo)', null=True, upload_to='images/event-logos/'),
+            model_name="event",
+            name="logo",
+            field=models.ImageField(
+                blank=True,
+                help_text="Event logo (overrides category and organisation logo)",
+                null=True,
+                upload_to="images/event-logos/",
+            ),
         ),
     ]

@@ -4,15 +4,16 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('schedule', '0009_remove_category_icon_category_image'),
+        ("schedule", "0009_remove_category_icon_category_image"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='event',
-            name='logo',
-            field=models.ImageField(blank=True, help_text='Event logo (overrides category logo)', null=True, upload_to='images/event-logos/'),
+            model_name="event",
+            name="logo",
+            field=models.ImageField(
+                blank=True, help_text="Event logo (overrides category logo)", null=True, upload_to="images/event-logos/"
+            ),
         ),
     ]

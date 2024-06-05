@@ -164,7 +164,7 @@ STORAGES = {
     },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-        #"BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
+        # "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
     },
 }
 
@@ -173,7 +173,7 @@ STATIC_ROOT = BASE_DIR.joinpath("collected_static")
 MEDIA_ROOT = PUBLIC_ROOT.joinpath("media")
 PUBLIC_STATIC = PUBLIC_ROOT.joinpath("static")
 STATICFILES_DIRS = [str(PUBLIC_STATIC)]
-#MEDIA_URL = "/public/media/"
+# MEDIA_URL = "/public/media/"
 MEDIA_URL = env("WSAF_ASSETS_BASE_URL", "https://assets.wsaf.org.uk") + "/"
 STATIC_URL = "/public/static/"
 

@@ -4,15 +4,16 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('schedule', '0013_event_long_description_organisation_instagram_handle_and_more'),
+        ("schedule", "0013_event_long_description_organisation_instagram_handle_and_more"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='event',
-            name='tiny_description',
-            field=models.CharField(blank=True, help_text='Used in website events introduction', max_length=50, null=True),
+            model_name="event",
+            name="tiny_description",
+            field=models.CharField(
+                blank=True, help_text="Used in website events introduction", max_length=50, null=True
+            ),
         ),
     ]
