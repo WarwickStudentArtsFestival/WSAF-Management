@@ -1,5 +1,7 @@
 # WSAF Management
 
+This was an MVP of a schedule management tool for WSAF 2024, using Django admin for making updates, and serving the updated schedule to digital signage and website. For later events, we switched to Pretalx, but this might be useful for *something* in the future (particularly the db models).
+
 Copy `template.env` to `.env`
 
 Run `docker compose up`
